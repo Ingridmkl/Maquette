@@ -2,24 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquette</title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Ingrid Moukala</div>
+        <div class="logo">Optim'eat</div>
         <div>
-            <ul class="nav-linkd">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#le produit">Le produit</a></li>
+                <li><a href="#nos partenaires">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="login">
+                <button class="btn btn-color-2" onclick="open('./Ressources/CV_Ingrid_Moukala.pdf')">Connexion</button>
             </ul>
         </div>
     </nav>
+    <nav id="corps-nav">
+        <div class="logo">Optim'eat</div>
+        <div class="corps-menu">
+            <div class="corps-icon" onclick="clickmenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
+        <div class="menu-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#le produit">Le produit</a></li>
+            <li><a href="#nos partenaires">Nos partenaires</a></li>
+        </div>
+    </nav>
+    <section id="profile">
+    </section>
     <script src="Script.js"></script>
 </body>
 </html>
