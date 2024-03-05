@@ -4,3 +4,8 @@ function clickmenu(){
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+
+function clickbutton(){
+    /*on click sur un boutons et puis on slide directement sur la partie 
+    de la page voulu (page glissante)*/
+}
