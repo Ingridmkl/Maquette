@@ -111,7 +111,8 @@ nav{
     position: absolute;
     top: 11%;
     right: 61px;
-    background-color: white;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
     width: fit-content;
     max-height: 0;
     overflow: hidden;
@@ -146,6 +147,7 @@ nav{
     padding: 10px;
     text-align: center;
     text-transform:uppercase ;
+    font-weight: bold;
     transition: background-color 300ms;
 }
 
@@ -192,6 +194,12 @@ nav{
     background-image: url("./Ressources/image1.jpg");
 }
 
+.part1 p {
+    color:white ;
+    padding-top: 100px;
+}
+
+
 .part1 button{ 
     font-size: large;
     background-color: transparent;
@@ -204,3 +212,34 @@ nav{
     text-transform:uppercase ;
     transition: background-color 300ms;
 }
+
+.part1 button:hover{
+    color: #fff;
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+}
+
+/*Description du produit*/
+/*Description technologie*/
+
+aside{
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    color: #000;
+}
+
+aside > p{
+    margin: 0.5rem;
+}
+
+/*
+width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+  */
