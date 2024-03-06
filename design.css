@@ -181,7 +181,11 @@ nav{
     transform: none;
 }
 
-/*Section*/
+/*Border*/
+
+.border1{
+
+}
 
 .part1{ 
     height: 500px;
@@ -192,6 +196,9 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("./Ressources/image1.jpg");
+    border-radius: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .part1 p {
@@ -222,16 +229,20 @@ nav{
 /*Description du produit*/
 /*Description technologie*/
 
+.des-produit {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
 aside{
     width: 40%;
     padding-left: 0.5rem;
-    margin-left: 0.5rem;
+    padding-left: 0.5rem;
     float: right;
     color: #000;
-}
-
-aside > p{
-    margin: 0.5rem;
 }
 
 /*
