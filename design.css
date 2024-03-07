@@ -243,6 +243,15 @@ aside{
     padding-left: 0.5rem;
     float: right;
     color: #000;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+}
+
+.des-techno {
+    margin-top: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 /*
@@ -254,3 +263,28 @@ width: 40%;
   font-style: italic;
   color: #29627e;
   */
+
+.nos-part{
+    margin-top: 400px;
+}
+
+.nos-part p{
+    color: #000;
+}
+
+.nos-part button{ 
+    font-size: large;
+    background-color: transparent;
+    border: 1.7px solid black ;
+    border-radius: 7px;
+    color: rgb(216, 27, 27);
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    text-transform:uppercase ;
+    box-shadow: inset 5px 0 5px -5px #000000;
+}
+
+.parten{
+    margin-top: 100px;
+}
