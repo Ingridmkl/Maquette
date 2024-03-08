@@ -180,7 +180,7 @@ nav{
 .corps-icon span:first-child{
     transform: none;
 }
-
+/*Fin navbar*/
 /*Border*/
 
 .border1{
@@ -288,3 +288,5 @@ width: 40%;
 .parten{
     margin-top: 100px;
 }
+
+/*Footer*/
