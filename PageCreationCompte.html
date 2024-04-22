@@ -10,6 +10,18 @@
 </head>
 
 <body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#le produit">Le produit</a></li>
+                <li><a href="#nos partenaires">Nos partenaires</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="wrapper">
         <form action="">
             <h1> Lancez-vous ! </h1>
@@ -26,27 +38,38 @@
             </div>
             <div class="input-box">
                 <input type="text" placeholder="Adresse Web du site du restaurant" required>
-                
-            </div>
-
-            <div class="input-box">
-                <input type="text" placeholder="Prénom" required>
-                
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Nom de famille" required>
-                
+                <input type="text" placeholder="Prénom" required>               
             </div>
-            
             <div class="input-box">
-                <input type="email" placeholder="Mail" required>
-                
+                <input type="text" placeholder="Nom de famille" required>                
+            </div>            
+            <div class="input-box">
+                <input type="email" placeholder="Mail" required>                
             </div>
             <div class="input-box">
                 <input type="password" placeholder="Créer votre mot de passe" required>
             </div>
             <div class=""></div>
             <button type="submit" class="btn">Envoyer</button>
+            <div class="ImageProfil">
+                <p>Sélectionnez une photo de profil :</p>
+                <input type="file" id="file-input" accept="image/*">
+                <label for="file-input" id="file-label">Choisir une photo</label>
+                <br>
+                <img id="profile-pic">
+                <script>
+                    document.getElementById('file-input').addEventListener('change', function(e) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                    document.getElementById('profile-pic').src = e.target.result;
+                    }
+                    reader.readAsDataURL(e.target.files[0]);
+                    });
+                </script>
+            </div>
+            
         </form>
     </div>
     
