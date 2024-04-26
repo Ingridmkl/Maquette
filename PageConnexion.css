@@ -1,21 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url('pageConnPhoto.png') no-repeat;
-  background-size: cover;
-  background-position: center;
+    font-family: "Poppins", sans-serif;
 }
+
+
+
+/*CSS pour le MENU : DEBUT*/
+
+nav, .nav-links{
+      display: flex;
+      
+}
+  
+nav{
+      align-items: center;
+      height: 17vh;
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+  
+.nav-links{
+      gap: 2rem;
+      list-style: none;
+      font-size: 1.5rem;
+      margin-left: 267px;
+      
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    text-decoration-color: white;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181,181,181) ;
+}
+
+  
+.logo{
+    font-size: 2rem;
+    margin-left: 133.5px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*CSS pour le MENU : FIN*/
+
+/*CSS pour le formulaire de connexion: DEBUT*/
 
 .wrapper{
     width: 420px;
@@ -26,6 +74,10 @@ body{
     color: white;
     border-radius: 10px;
     padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    
 }
 
 .wrapper h1{
@@ -47,17 +99,16 @@ body{
     width: 100%;
     height: 100%;
     background: transparent;
-    border: none;
     outline: none;
-    border: 2px solid rgba(255,255 ,255, .2);
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
 .input-box input::placeholder{
-    color: white;
+    color: black;
 }
 
 .input-box i{
@@ -76,12 +127,12 @@ body{
 }
 
 .remember-forgot label input{
-    accent-color: white;
+    accent-color: black;
     margin-right: 3px;
 }
 
 .remember-forgot a{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -92,7 +143,7 @@ body{
 .wrapper .btn{
     width: 100%;
     height: 45px;
-    background: white;
+    background: black;
     border: none;
     outline : none;
     border-radius: 40px;
@@ -110,7 +161,7 @@ body{
 }
 
 .register-link p a{
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: 600;
 }
@@ -118,3 +169,25 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+/*pour le "se souvenir de moi"*/
+label{
+    color: black;
+}
+
+/*pour le "btn connecter"*/
+button{
+    color: white !important;
+}
+
+
+/*pour le "vous avez deja un compte ?"*/
+.register-link p{
+    color: black;
+}
+
+
+
+
+
+/*CSS pour le formulaire de connexion : FIN*/

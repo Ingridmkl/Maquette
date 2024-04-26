@@ -1,25 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url('creationComptePhoto.jpg') no-repeat;;
-  background-size: cover;
-  background-position: center;
+    font-family: "Poppins", sans-serif;
 }
 
+
+
+/*CSS pour le MENU : DEBUT (PRENDRE AUSSI @import url, *{} et body{} du dessus !!!!)*/
+
+nav, .nav-links{
+      display: flex;
+      
+}
+  
+nav{
+      align-items: center;
+      height: 17vh;
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+  
+.nav-links{
+      gap: 2rem;
+      list-style: none;
+      font-size: 1.5rem;
+      margin-left: 267px;
+      
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    text-decoration-color: white;
+    transition: all 300ms ease;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181,181,181) ;
+}
+
+  
+.logo{
+    font-size: 2rem;
+    margin-left: 133.5px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*CSS pour le MENU : FIN*/
+
+
+/*CSS pour le formulaire : DEBUT*/
+
 .wrapper{
-    width: 800px;
-    height: 610px;
+    width: 790px;
+    position: relative;
+    height: 550px;
     background: transparent;
     border: 2px solid rgba(255,255 ,255, .2);
     backdrop-filter: blur(20px);
@@ -27,6 +77,8 @@ body{
     color: grey;
     border-radius: 10px;
     padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -50,17 +102,17 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255,255 ,255, .2);
+    border: 2px solid black;
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color: black;
     padding: 20px 45px 20px 20px;
 }
 
 .wrapper .btn{
-    width: 40%;
+    width: 30%;
     height: 45px;
-    background: white;
+    background: black;
     border: none;
     outline : none;
     border-radius: 40px;
@@ -74,8 +126,47 @@ body{
 }
 
 
+button{
+    color: white !important;
+    position: absolute; /* Permet de positionner le bouton par rapport au wrapper */
+    bottom: 0; /* Positionne le bouton en bas du wrapper */
+    right: 0; /* Positionne le bouton à droite du wrapper */
+    margin-bottom: 37px;
+    margin-right: 40px;
+}
 
+#file-input {
+    display: none;
+}
+#file-label {
+    padding: 4px;
+    color: white;
+    background-color: gray;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-  
+#profile-pic {
+    width: 250px;
+    height: 110px;
+    border: 1px solid black;
+    object-fit: cover;
+    margin-top: 10px;
+}
 
+.ImageProfil{
+    position: absolute; /* Permet de positionner le bouton par rapport au wrapper */
+    top: 0; /* Positionne le bouton en bas du wrapper */
+    right: 0; /* Positionne le bouton à droite du wrapper */
+    margin-top: 170px;
+    margin-right: 30px;
 
+}
+
+.ImageProfil p{
+    margin-bottom: 8px;
+    color: black;
+    
+}
+
+/*CSS pour le formulaire : FIN*/
