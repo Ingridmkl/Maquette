@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquette</title>
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
 </head>
 <body>
     <nav id="desktop-nav">
@@ -55,51 +56,79 @@
             <button class="btn btn-color-2"> En savoir plus </button>
         </div>
     </section>
-    <div class="des-produit">
-        Description du produit<br>
-        <aside id="aside1">
-            <img src="./Ressources/sensory.png" width="40%" height="40%">
-        </aside>
-    </div>
-    <div class="des-techno">
-        Description tech<br>
-        <aside id="aside2">
-            <img src="./Ressources/sensory.png" width="40%" height="40%">
-        </aside>
-    </div>
-    <section id="partenaires">
-        <div class="nos-part">
-            <p>Nos Partenaires</p>
-            <ul class="parten">
-                <a href="https://mosuke-restaurant.com/">
-                    <button class="btn btn-color-2" >
-                        <p>MOSUKE PARIS</p>
-                        <img src="./Ressources/mosuke1.png" width="10%" height="5%">
-                    </button>
-                </a>
-            </ul>
+    <section id="menu-glissant-2">
+        <div class="part2">
+            <p id="Titre"> Description de notre produit. </p>
+            <aside id="aside1">
+                <p id="Titre1"> Optim'eat </p>
+                <p id="corps"> 
+                    Découvrez Optim'eat, notre solution pour améliorer l'expérience auditive au sein d'un réstaurant. <br>
+                    Votre confort et bien-être sont notre priorité.
+                </p>
+                <img src="" alt="">
+            </aside>
+            <aside id="aside2">
+                <p id="Titre1"> Nos capteurs </p>
+                <p id="corps">
+                    Des capteurs de son sont placés aux endroits stratégiques de la salle de restaurant.<br>
+                    Grace aux mesures prises par ces capteurs, <br>
+                    Nous sommes en capacité d'exploiter ces données afin de gérer automatiquement l'ambiance sonore en temps réel.<br>
+                </p>
+            </aside>
+
         </div>
-        
-        <div class="part2"></div>
-        <div class="part3"></div>
+    </section>
+    <section id="text-animation">
+        <ul class="dynamic-text">
+            <li class="one"><span>Vous souhaitez en savoir plus?</span></li>
+            <li class="two"><span>Remplissez ce formulaire,</span></li>
+            <li class="three"><span>Et soyez tenus de nos actualités!</span></li>
+        </ul>
+    </section>
+    <section id="form-area">
+        <form>
+            <div class="box">
+                <input type="text" placeholder="Nom" required>
+            </div>
+            <div class="box">
+                <input type="text" placeholder="Prénom" required>
+            </div>
+            <div class="box">
+                <input type="tel" placeholder="Numéro" required>
+            </div>
+            <div class="box">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="box">
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </form>
+    </section>
+    <section id="partenaires">
+        <div class="nos-partenaires">
+        </div>
     </section>
     <footer>
         <div class="footer-container">
-            <div class="social-icons">
-                <a href="https://www.instagram.com/groupe_audesign/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.instagram.com/groupe_audesign/"><i class="fa-brands fa-instagram"></i></i></a>
-                <a href="https://www.instagram.com/groupe_audesign/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.instagram.com/groupe_audesign/"><i class="fa-brands fa-instagram"></i></a>
+            <div class="col">
+                <img src="./Ressources/AUDESIGN LOGO blanc.png" class="audesign-logo">
+                <p>ksjhogher ksjkjrgh skjrhgkjrghkeghkrjhge kjhgkejgh kjeghkjg kjhgkjgh </p>
             </div>
-            <div class="footer-quick-links">
+            <div class="col">
+                <h3>A propos de</h3>
+                <p></p>
+            </div>
+            <div class="col">
+                <h3>Raccourcis</h3>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#le produit">Le produit</a></li>
                     <li><a href="#nos partenaires">Nos partenaires</a></li>
                 </ul>
             </div>
-            <div class="footer-bottom">
-                <p>Copyright &copy;2022; Designed by <span class="designer">AuDesign</span></p>
+            <div class="col">
+                <h3>Contactez-nous</h3>
             </div>
         </div>
     </footer>
