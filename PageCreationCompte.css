@@ -69,7 +69,7 @@ a:hover {
 .wrapper{
     width: 790px;
     position: relative;
-    height: 550px;
+    height: 670px;
     background: transparent;
     border: 2px solid rgba(255,255 ,255, .2);
     backdrop-filter: blur(20px);
