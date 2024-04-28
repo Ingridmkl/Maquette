@@ -22,19 +22,18 @@
         </div>
     </nav>
     <div class="wrapper">
-        <form action="">
+        <form action="ConnexionCompteProcess.php" method="post">
             <h1> Connexion </h1>
             <div class="input-box">
-                <input type="text" placeholder="Identifiant" required>
+                <input type="text" name="email" placeholder="Adresse Mail " required> 
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Mot de passe" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox">Se souvenir de moi</label>
-                <a href="#">Mot de passe oublié ?</a>
+                <a href="#" id="mdp">Mot de passe oublié ?</a>
             </div>
             
             <button type="submit" class="btn">Se connecter</button>

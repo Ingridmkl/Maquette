@@ -67,9 +67,9 @@ a:hover {
 /*CSS pour le formulaire : DEBUT*/
 
 .wrapper{
-    width: 790px;
+    width: 740px;
     position: relative;
-    height: 670px;
+    height: 690px;
     background: transparent;
     border: 2px solid rgba(255,255 ,255, .2);
     backdrop-filter: blur(20px);
@@ -86,11 +86,12 @@ a:hover {
     font-size: 36px;
     text-align: center;
     color: black;
+    margin-bottom: 2px;
 }
 
 .wrapper .input-box{
     position: relative;
-    width: 60%;
+    width: 80%;
     height: 50px;
     margin: 8px 0;
 
@@ -100,7 +101,6 @@ a:hover {
     width: 100%;
     height: 90%;
     background: transparent;
-    border: none;
     outline: none;
     border: 2px solid black;
     border-radius: 40px;
@@ -125,14 +125,18 @@ a:hover {
     margin-top: 15px ;
 }
 
-
 button{
     color: white !important;
-    position: absolute; /* Permet de positionner le bouton par rapport au wrapper */
-    bottom: 0; /* Positionne le bouton en bas du wrapper */
-    right: 0; /* Positionne le bouton à droite du wrapper */
-    margin-bottom: 37px;
-    margin-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+
+}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 #file-input {
@@ -144,29 +148,6 @@ button{
     background-color: gray;
     border-radius: 6px;
     cursor: pointer;
-}
-
-#profile-pic {
-    width: 250px;
-    height: 110px;
-    border: 1px solid black;
-    object-fit: cover;
-    margin-top: 10px;
-}
-
-.ImageProfil{
-    position: absolute; /* Permet de positionner le bouton par rapport au wrapper */
-    top: 0; /* Positionne le bouton en bas du wrapper */
-    right: 0; /* Positionne le bouton à droite du wrapper */
-    margin-top: 170px;
-    margin-right: 30px;
-
-}
-
-.ImageProfil p{
-    margin-bottom: 8px;
-    color: black;
-    
 }
 
 /*CSS pour le formulaire : FIN*/

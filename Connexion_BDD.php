@@ -3,7 +3,7 @@
 //c'est le code pour faire le lien avec la bdd
 
 $servername = "localhost";
-$username = "root";
+$username = "root";   /*si jamais ça ne marche pas, essaye de remplacer root par ton prénom (Ingrid, JD, Louis, Eliott ou Victor) et ajoute en mot de passe : G9Cdatabase */
 $password = "";
 $dbname = "maquettedatabase";
 
