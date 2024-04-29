@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'Millik';
+  src: url('./Ressources/Millik.ttf') format('truetype');
+  /* Remplacez 'chemin/vers/le/fichier/Millik-Regular.ttf' par le chemin réel vers le fichier de police sur votre serveur */
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Millik', sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+p{
+  color: rgb(85,85,85)
+}
+
+/**/
+
+a, 
+.btn{
+  transition: all 300ms ease;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: rgb(181,181,181) ;
+}
+
+/*Nav Bar*/
+
+nav, 
+.nav-links{
+  display: flex;
+}
+
+nav{
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;/*ou 17vh*/
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-links{
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.login button{
+  background-color: transparent;
+  border: 1.7px solid black ;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  text-transform:uppercase ;
+  transition: background-color 300ms;
+}
+
+.login button:hover{
+  color: #fff;
+  background-color: #000;
+
+}
+
+.logo{
+  font-size: 2rem;
+}
+
+.logo:hover{
+  cursor: default;
+}
+
+/*menu sandwich*/
+#corps-nav{
+  display: none;
+}
+.corps-menu{
+  position: relative;
+  display: inline-block;
+}
+
+.corps-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.corps-icon span{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
+  position: absolute;
+  top: 11%;
+  right: 61px;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+/*Boutton menu sandwich*/
+.menu-links button{
+  background-color: transparent;
+  border: 1.7px solid black ;
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  text-transform:uppercase ;
+  font-weight: bold;
+  transition: background-color 300ms;
+}
+
+.menu-links button:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+.partners {
+  padding: 20px;
+  background-color: #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.partners h2 {
+  text-align: center;
+  font-family: 'Millik', sans-serif;
+  margin-left: 15px;
+  color: #333;
+}
+
+.restaurant {
+  background-color: white;
+  margin: 20px auto;
+  width: 70%; /* Largeur du cadre restaurant */
+  height: 230px; /* Hauteur fixe pour tous les cadres */
+  display: flex;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info {
+  width: 30%; /* Ajusté pour laisser 70% à l'image */
+  display: flex;
+  align-items: center; /* Centrer verticalement le contenu de .info */
+  justify-content: space-between; /* Espacement entre le nom et le bouton */
+  padding: 10px; /* Padding ajusté */
+  box-sizing: border-box;
+}
+
+.info h3 {
+  margin: 0; /* Supprime les marges par défaut de h3 */
+  flex-grow: 1; /* Permet au titre de prendre l'espace disponible */
+  margin-left: 20px;
+}
+
+.info button {
+  background-color: transparent;
+    border: 1.7px solid black ;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+    text-transform:uppercase ;
+    font-weight: bold;
+    transition: background-color 300ms;
+}
+
+.info button:hover {
+  background-color: black;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-transform:uppercase ;
+    font-weight: bold;
+    transition: background-color 300ms;
+}
+
+.image {
+  width: 70%; /* L'image prend 70% du cadre */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : 15px; /* Marge autour de l'image */
+  border-radius: 10px; /* Bords arrondis de l'image */
+  overflow: hidden; /* Empêche l'image de déborder */
+}
+
+.image img {
+  width: 100%; /* L'image remplit l'espace disponible dans .image */
+  height: auto; /* Hauteur ajustée automatiquement */
+  object-fit: cover; /* Couvre la zone sans déformer */
+  border-radius: 10px; /* Bords arrondis pour l'image elle-même */
+}
+.h2{
+  text-align: center;
+  color: #333;
+  font-size: 24px; /* Ajoutez la taille de la police que vous souhaitez ici */
+  padding-bottom: 20px;
+  margin-left: 15px;
+  color: #333;}
+
+  
