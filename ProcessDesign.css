@@ -1,5 +1,16 @@
 /*CSS des fichier .php DEBUT */
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
 .welcome_message{
     /*font-family: "Poppins", sans-serif;*/
     font-size: 25px;
@@ -23,7 +34,7 @@
 
 .logout button:hover{
     color: #fff;
-    background-color: #000;
+    background-color: black;
 
 }
 
@@ -35,12 +46,13 @@
     margin-top: 40px;
 }
 
-.logo{
-    font-size: 2rem;
-    margin-left: 133.5px;
+.logo img {
+    height: 50px;
+    width: 50px;
 }
 
 .logo:hover{
     cursor: default;
 }
+
 /*CSS des fichier .php FIN */

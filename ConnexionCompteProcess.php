@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
 </head>
 <body>
-<nav id="desktop-nav">
+    <nav id="desktop-nav">
         <div class="logo">
             <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
         </div>
