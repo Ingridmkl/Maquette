@@ -446,7 +446,7 @@ form .box button{
 footer{
     width: 100%;
     bottom: 0;
-    background: linear-gradient(to right, #313131, rgb(153, 94, 6));
+    background: rgb(46, 46, 46)/*linear-gradient(to right, #313131, rgb(153, 94, 6))*/;
     color: #fff;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;
@@ -466,6 +466,10 @@ footer{
 .col{
     flex-basis: 25%;
     padding: 10px;
+}
+
+.col h3{
+    margin-bottom: 20px;
 }
 
 .audesign-logo{
