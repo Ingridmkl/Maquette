@@ -183,6 +183,10 @@ nav{
 /*Fin navbar*/
 /*Border*/
 
+#menu-glissant-2{
+    margin-bottom: 40px;
+}
+
 .part1{ 
     height: 500px;
     font-size: 80px;
@@ -318,129 +322,7 @@ width: 40%;
 .parten{
     margin-top: 100px;
 }
-/*Text animation*/
-
-#text-animation{
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#text-animation .dynamic-text{
-    height: 90px;
-    overflow: hidden;
-}
-
-.dynamic-text li{
-    text-align: center;
-    list-style: none;
-    font-size:38px;
-    font-weight: 500;
-    position: relative;
-    top: 0;
-    animation: slide 6s steps(3) infinite;
-}
-
-@keyframes slide{
-    100%{
-        top: -360px;
-    }
-}
-
-.dynamic-text li span{
-    position: relative;
-}
-
-.dynamic-text li span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(245, 245, 247);
-    border-left: 2px solid black;
-    animation: typing 1.5s steps(33) infinite;
-}
-
-/*
-.dynamic-text .one span::after{
-    animation: typing 10s steps(52) infinite;
-}
-.dynamic-text .two span::after{
-    animation: typing 10s steps(25) infinite;
-}
-.dynamic-text .three span::after{
-    animation: typing 10s steps(45) infinite;
-}
-*/
-
-@keyframes typing{
-    100%{
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
-}
-
-/*Fromulaire*/
-
-#form-area {
-    text-align: center;
-}
-
-form{
-    background-color: rgb(255, 255, 255);
-    padding-bottom: 15px;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    width: 500px;
-    height: auto;
-    border-radius: 9px;
-}
-
-form .box input{
-    margin-left: 100px;
-    margin-right: 100px;
-    background: transparent;
-    color: black;
-    border: 1px solid black;
-    border-radius: 7px;
-    padding: 5px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    outline: none;
-}
-
-form .box{
-    padding-top: 10px;
-}
-
-form .box button{
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-}
-
-/*Section partenaires*/
-.nos-partenaires{ 
-    height: 200px;
-    font-size: 80px;
-    text-align: center;
-    color: #fff;
-    cursor: default;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("./Ressources/Mosuke3.png");
-    border-radius: 40px;
-    border: #000;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 500px;
-    margin-bottom: 100px;
-}
+/*Recherche/Partenaires*/
 
 /*Footer*/
 footer{
@@ -484,9 +366,6 @@ footer{
 }
 .col ul li a:hover {
     color: rgb(81, 115, 138);
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
-    text-decoration-color: rgb(81, 115, 138);
 }
 
 .audesign-logo{
@@ -531,16 +410,6 @@ footer{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-/*Hover effect
-.social-icons a:hover{
-    background-color: #111;
-    transition: 0.5s;
-}
-.social-icons a:hover i{
-    color: white;
-    transition: 0.5s;
-}*/
 
 /*Quick links*/
 .footer-quick-links{
