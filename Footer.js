@@ -1,8 +1,6 @@
 function Footer(){
     return(
-        <footer>
-            <p>&copy; {new Date().getFullYear()} Designed by AuDesign</p>
-        </footer>
+        <p>&copy; {new Date().getFullYear()} Designed by AuDesign</p>
     );
 }
 

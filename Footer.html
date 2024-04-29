@@ -1,5 +1,80 @@
-/* GENERAL */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#menu-glissant-2">Le produit</a></li>
+                <li><a href="#nos partenaires">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="login">
+                <a href="PageConnexion.html">
+                    <button class="btn btn-color-2">Connexion</button>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <nav id="corps-nav">
+        <div class="logo">
+            <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
+        </div>
+        <div class="corps-menu">
+            <div class="corps-icon" onclick="clickmenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
+        <div class="menu-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#menu-glissant-2">Le produit</a></li>
+            <li><a href="#nos partenaires">Nos partenaires</a></li>
+            <a href="PageConnexion.html">
+                <button class="btn btn-color-2" >Connexion</button>
+            </a>
+        </div> 
+    </nav>
+    <footer>
+        <div class="footer-container">
+            <div class="col">
+                <img src="./Ressources/AUDESIGN LOGO blanc.png" class="audesign-logo">
+            </div>
+            <div class="col">
+                <h3>A propos de</h3>
+                <p>ISEP,</p>
+                <p>10 Rue de Vanves,</p>
+                <p>92130, Issy-les-Moulineaux.</p>
+            </div>
+            <div class="col">
+                <h3>Raccourcis</h3>
+                <ul>
+                    <li><a href="#index.html">Accueil</a></li>
+                    <li><a href="#menu-glissant-2">Le produit</a></li>
+                    <li><a href="#nos partenaires">Nos partenaires</a></li>
+                </ul>
+            </div>
+            <div class="colb">
+                <h3>Contactez-nous!</h3>
+                <a href="https://www.instagram.com/groupe_audesign/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
 
+</html>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -16,12 +91,6 @@ body{
 html{
     scroll-behavior: smooth;
 }
-
-p{
-    color: rgb(85,85,85)
-}
-
-/**/
 
 a, 
 .btn{
@@ -181,148 +250,6 @@ nav{
     transform: none;
 }
 /*Fin navbar*/
-/*Border*/
-
-#menu-glissant-2{
-    margin-bottom: 40px;
-}
-
-.part1{ 
-    height: 500px;
-    font-size: 80px;
-    text-align: center;
-    color: #fff;
-    cursor: default;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("./Ressources/image1.jpg");
-    border-radius: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.part1 p {
-    color:white ;
-    padding-top: 100px;
-}
-
-
-.part1 button{ 
-    font-size: large;
-    background-color: transparent;
-    border: 1.7px solid white ;
-    border-radius: 7px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-    text-transform:uppercase ;
-    transition: background-color 300ms;
-}
-
-.part1 button:hover{
-    color: #fff;
-    backdrop-filter: blur(2px);
-    background-color: transparent;
-}
-
-/*Description du produit*/
-/*Description technologie*/
-
-.part2{
-    overflow: hidden; /*éviter les débordements*/
-}
-
-#aside1 {
-    float: left;
-    width: 48%;
-    background-color: white;
-    margin-left: 20px;
-}
-
-#aside2 {
-    float: right;
-    width: 47%;
-    background-color: white;
-    margin-right: 20px;
-}
-
-#aside1, #aside2{
-    height: 350px;
-}
-/*
-#aside1, #aside2 {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 1); /* Ombre avec une légère transparence
-}
-*/
-#Titre{
-    text-align: center;
-    color: #000;
-    font-size: 56px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    font-weight: 500;
-}
-
-#Titre1{
-    text-align: center;
-    color: #000;
-    font-size: 48px;
-    padding-top: 60px;
-    padding-bottom: 10px;
-    font-weight: 500;
-}
-
-#corps{
-    font-size: 19px;
-    font-weight: 400;
-    text-align: center;
-    color: #000;
-}
-
-.des-techno {
-    margin-top: 400px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 20px;
-    text-decoration: underline;
-}
-
-/*
-width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #29627e;
-  font-style: italic;
-  color: #29627e;
-  */
-
-.nos-part{
-    margin-top: 400px;
-}
-
-.nos-part p{
-    color: #000;
-}
-
-.nos-part button{ 
-    font-size: large;
-    background-color: transparent;
-    border: 1.7px solid black ;
-    border-radius: 7px;
-    color: rgb(216, 27, 27);
-    cursor: pointer;
-    padding: 10px;
-    text-align: left;
-    text-transform:uppercase ;
-    box-shadow: inset 5px 0 5px -5px #000000;
-}
-
-.parten{
-    margin-top: 100px;
-}
-/*Recherche/Partenaires*/
 
 /*Footer*/
 footer{
@@ -423,3 +350,4 @@ footer{
 .footer-quick-links{
     margin: 30px 0;
 }
+</style>
