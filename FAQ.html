@@ -111,5 +111,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const allDetails = document.querySelectorAll('details');
+
+        allDetails.forEach((details) => {
+            details.addEventListener('toggle', (event) => {
+                if (details.open) {
+                    allDetails.forEach((otherDetails) => {
+                        if (otherDetails !== details) {
+                            otherDetails.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 </body>
 </html>
