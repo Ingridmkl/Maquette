@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#menu-glissant-2">Le produit</a></li>
+                <li><a href="#nos partenaires">Nos partenaires</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="login">
+                <a href="PageConnexion.html">
+                    <button class="btn">Connexion</button>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="wrapper">
+            <form action="https://formsubmit.co/groupeaudesign@gmail.com" method="POST">
+                <h2>Votre nom</h2>
+                <div class="input-box">
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <h2>Votre adresse email</h2>
+                <div class="input-box">
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <h2>Sujet de votre mail</h2>
+                <div class="input-box">
+                    <input type="text" id="sujet" name="sujet" required>
+                </div>
+                <h2>Votre message</h2>
+                <div class="textarea">
+                    <div class="input-box">
+                        <textarea name="msg" aria-required="true" placeholder="Tapez ici votre message"></textarea>
+                    </div>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
