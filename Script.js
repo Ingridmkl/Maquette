@@ -12,7 +12,7 @@ const search = () =>{
     const searchbox = document.getElementById("search-item").value.toUpperCase();
     const items = document.getElementById("product-list")
     const product = document.querySelectorAll(".product")
-    const pname = document.getElementsByTagName("h2")
+    const pname = items.getElementsByTagName("h2")
 
     for(var i=0; i < pname.length;i++){
         let match = product[i].getElementsByTagName('h2')[0];
