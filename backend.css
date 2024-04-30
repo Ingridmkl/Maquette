@@ -1,0 +1,30 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #bbb;
+    margin-top: 40px;
+}
+.category {
+    width: 45%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+h1, h2 {
+    color: #444;
+}
+
+h4{
+    margin-top: 30px ;
+    margin-left: 90px;
+    font-size: 1.5rem;
+}
+

@@ -1,23 +1,16 @@
 /*CSS des fichier .php DEBUT */
+.welcome_message{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    margin-left: 100px;
+    margin-top: 30px;
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
-
-
-
-
-.welcome_message{
-    /*font-family: "Poppins", sans-serif;*/
-    font-size: 25px;
-    margin-left: 30px;
-    margin-top: 40px;
-
-
+body{
+    display: flex;
+    flex-direction: column; /*c le body que j ai rajouté, si jamais ça pose probleme après...*/
+    font-family: "Poppins", sans-serif;
 }
 
 .logout button{
@@ -46,13 +39,136 @@ nav {
     margin-top: 40px;
 }
 
-.logo img {
-    height: 50px;
-    width: 50px;
-}
-
-.logo:hover{
-    cursor: default;
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 130px; /* Ajustez la hauteur ici */
+    width: 130px; /* Ajustez la largeur ici */
+    margin-top: 20px;
+    margin-left: 25px;
 }
 
 /*CSS des fichier .php FIN */
+
+
+
+/*CSS pour le dashboard DEBUT*/
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 25% 15% 60%; 
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    
+}
+
+
+.user {
+grid-column: 1 / 2;
+grid-row: 1 / 3 ;
+border: 2px solid black ;
+border-radius: 10px;
+width: 100%;    
+padding: 10px;  
+box-sizing: border-box;
+position: relative;     
+/*box-shadow: 0 0 10px black;*/
+}
+.user h2, .user h3, .user p {
+margin: 0; 
+padding: 0;     
+word-wrap: break-word;  
+}
+
+
+
+.graph {
+grid-column: 1 / 2;
+grid-row: 3 / 4 ;
+border: 2px solid black ;
+border-radius: 10px;
+width: 100%;    
+padding: 10px;  
+box-sizing: border-box; 
+}
+.graph h2, .graph p {
+margin: 0; 
+padding: 0;     
+word-wrap: break-word;  
+}
+
+.parameters {
+grid-column: 2 / 3;
+grid-row: 1 / 4 ;
+border: 2px solid black ;
+border-radius: 10px;
+width: 100%;    
+padding: 10px;  
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+
+}
+.parameters h2, .parameters p {
+margin: 0; 
+padding: 0;     
+word-wrap: break-word; 
+
+}
+
+.choice_alea, .choice_predef {
+width: 95%; /* Ajustez cette valeur selon vos besoins */
+height: 90px; /* Ajustez cette valeur selon vos besoins */
+border: 2px solid black;
+border-radius: 10px;
+margin-top: 10px; /* Ajoute un espace entre les deux div */
+margin-left: auto;
+margin-right: auto;
+}   
+
+.choice_alea p, .choice_predef p {
+text-align: center;
+font-weight: bold;
+margin-top: 25px;
+}
+
+
+.soundInfo {
+grid-column: 3 / 3;
+grid-row: 1 / 2 ;
+border: 2px solid black ;
+border-radius: 10px;
+width: 100%;    
+padding: 10px;  
+box-sizing: border-box; 
+}
+.soundInfo h2, .soundInfo p {
+margin: 0; 
+padding: 0;     
+word-wrap: break-word;  
+}
+
+.playlist {
+grid-column: 3 / 3;
+grid-row: 2 /4 ;
+border: 2px solid black ;
+border-radius: 10px;
+width: 100%;    
+padding: 10px;  
+box-sizing: border-box; 
+}
+
+
+#myCanvas {
+    border: 1px solid black;
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+}
+
+/*CSS pour le dashboard FIN*/
