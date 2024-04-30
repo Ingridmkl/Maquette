@@ -323,6 +323,106 @@ width: 40%;
     margin-top: 100px;
 }
 /*Recherche/Partenaires*/
+/*Search area*/
+
+.tamp{
+    width: 80%;
+    height: 520px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.tamp::-webkit-scrollbar{
+    display: none;
+}
+
+.tamp form{
+    width: 50%;
+    border: 1.8px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tamp form input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px;
+}
+
+.tamp form i{
+    padding-left: 10px;
+}
+.product-list{
+    padding: 20px 0;
+}
+.product{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product .reservation{
+    margin-left: auto;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation a:hover{
+    color: #cca76e;
+}
+
+.reservation a, .reservation p{
+    margin: 0 5px;
+}
+
+.reservation hr{
+    border: none;
+    border-top: 1px solid black;
+    margin: 5px 0;
+}
+
+.product img{
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    border: 5px;
+    border-radius: 5px;
+}
+
+.p-details{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-details h2{
+    font-size: 27px;
+    margin-bottom: auto;
+    color: black;
+}
+
+.p-details h6{
+    color: black;
+    margin-top: auto;
+}
 
 /*Footer*/
 footer{

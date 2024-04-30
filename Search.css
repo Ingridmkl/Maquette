@@ -302,6 +302,12 @@ footer{
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.tamp::-webkit-scrollbar{
+    display: none;
 }
 
 .tamp form{
@@ -327,15 +333,38 @@ footer{
     padding-left: 10px;
 }
 .product-list{
-    margin-top: 20px;
+    padding: 20px 0;
 }
 .product{
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 10px;
+    margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product .reservation{
+    margin-left: auto;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation a:hover{
+    color: #cca76e;
+}
+
+.reservation a, .reservation p{
+    margin: 0 5px;
+}
+
+.reservation hr{
+    border: none;
+    border-top: 1px solid black;
+    margin: 5px 0;
 }
 
 .product img{
@@ -346,10 +375,19 @@ footer{
     border-radius: 5px;
 }
 
-.product .p-details{
+.p-details{
     margin-left: 5px;
+    display: flex;
+    flex-direction: column;
 }
-.product .p-details h2{
-    font-size: 20px;
 
+.p-details h2{
+    font-size: 27px;
+    margin-bottom: auto;
+    color: black;
+}
+
+.p-details h6{
+    color: black;
+    margin-top: auto;
 }
