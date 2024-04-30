@@ -55,7 +55,7 @@ img.centered {
 }
 
 .scrollable {
-    max-height: 480px; /* Définir une hauteur maximale */
+    max-height: 400px; /* Définir une hauteur maximale */
     overflow-y: auto; /* Permet le défilement vertical */
     overflow-x: hidden; /* Évite le défilement horizontal */
 }
