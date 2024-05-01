@@ -45,24 +45,25 @@
                 <p><a href="PageConnexion.html">Vous avez déjà un compte ?</a></p> 
             </div>
             <div class="input-box">
-                <input type="text" name="adresse_etablissement" placeholder="Adresse de l'établissement" required>
-                
+                <input type="text"name="nom_etablissement" placeholder="Nom de l'établissement" required>
             </div>
             <div class="input-box">
-                <input type="text"name="nom_etablissement" placeholder="Nom de l'établissement" required>
-                
+                <input type="text" name="adresse_etablissement" placeholder="Adresse de l'établissement" required>
             </div>
             <div class="input-box">
                 <input type="text" name="site_web" placeholder="Adresse Web du site du restaurant" required>
             </div>
             <div class="input-box">
-                <input type="text" name="prenom" placeholder="Prénom" required>               
-            </div>
-            <div class="input-box">
                 <input type="text" name="nom" placeholder="Nom de famille" required>                
-            </div>            
+            </div> 
+            <div class="input-box">
+                <input type="text" name="prenom" placeholder="Prénom" required>               
+            </div>           
             <div class="input-box">
                 <input type="email" name="email" placeholder="Mail" required>                
+            </div>
+            <div class="input-box">
+                <input type="tel" name="numTel" placeholder="Numero de téléphone" pattern="[0-9]{10}" required>
             </div>
             <div class="input-box">
                 <input id="password" type="password" name="password" placeholder="Créer votre mot de passe" required>
@@ -76,6 +77,13 @@
             </div>
             <button type="submit" class="btn">Envoyer</button>            
         </form>
+        
+    </div>
+    <div>
+        <p>
+            <br>
+            <br> <!--c'est pour mettre de l'espace avec le footer -->
+        </p>
     </div>
     <footer>
         <div class="footer-container">
