@@ -12,18 +12,16 @@ $password = $_POST['password'];
 
 // Insérer les données dans la table 'restaurant'
 $sql_restaurant = "INSERT INTO restaurant (Adresse, Nom, SiteWeb) VALUES ('$adresse_etablissement', '$nom_etablissement', '$site_web')";
-if ($conn->query($sql_restaurant) === TRUE) {
-  echo "Nouvel établissement créé avec succès";
-} else {
-  echo "Erreur: " . $sql_restaurant . "<br>" . $conn->error;
-}
+$restaurantCreated = $conn->query($sql_restaurant);
 
 // Insérer les données dans la table 'restaurateur'
 $sql_restaurateur = "INSERT INTO restaurateur (Prénom, nom, email, mot_de_passe) VALUES ('$prenom', '$nom', '$email', '$password')";
-if ($conn->query($sql_restaurateur) === TRUE) {
-  echo "Nouveau restaurateur créé avec succès";
+$restaurateurCreated = $conn->query($sql_restaurateur);
+
+if ($restaurantCreated === TRUE && $restaurateurCreated === TRUE) {
+    echo "<script>alert('Votre compte a bien été créé ! Vous pouvez vous connecter !'); window.location = 'http://localhost/Maquette/PageConnexion.html';</script>";
 } else {
-  echo "Erreur: " . $sql_restaurateur . "<br>" . $conn->error;
+    echo "<script>alert('Une erreur est survenue lors de la création de votre compte, veuillez recommencer.'); window.location = 'http://localhost/Maquette/PageCreationCompte.html';</script>";
 }
 
 $conn->close();

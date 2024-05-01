@@ -292,10 +292,20 @@ footer{
 }
 
 /*Search area*/
+#search{
+    align-items: center;
+}
+
+#search h2{
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
 
 .tamp{
     width: 80%;
-    height: 520px;
+    height: 1000px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
@@ -304,6 +314,7 @@ footer{
     padding: 20px;
     align-items: center;
     overflow-y: scroll;
+    justify-content: center;
 }
 
 .tamp::-webkit-scrollbar{
@@ -317,6 +328,7 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 25%;
 }
 
 .tamp form input{
@@ -391,3 +403,96 @@ footer{
     color: black;
     margin-top: auto;
 }
+
+/*partie faite par Louis*/
+.partners {
+    margin-top: 60px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .partners h2 {
+    text-align: center;
+    margin-left: 15px;
+    color: #333;
+  }
+  
+  .restaurant {
+    background-color: white;
+    margin: 20px auto;
+    width: 70%; /* Largeur du cadre restaurant */
+    height: 230px; /* Hauteur fixe pour tous les cadres */
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .info {
+    width: 30%; /* Ajusté pour laisser 70% à l'image */
+    display: flex;
+    align-items: center; /* Centrer verticalement le contenu de .info */
+    justify-content: space-between; /* Espacement entre le nom et le bouton */
+    padding: 10px; /* Padding ajusté */
+    box-sizing: border-box;
+  }
+  
+  .info h3 {
+    margin: 0; /* Supprime les marges par défaut de h3 */
+    flex-grow: 1; /* Permet au titre de prendre l'espace disponible */
+    margin-left: 20px;
+  }
+  
+  .info button {
+    background-color: transparent;
+      border: 1.7px solid black ;
+      border-radius: 7px;
+      color: black;
+      cursor: pointer;
+      padding: 10px;
+      margin-right: 20px;
+      text-align: center;
+      text-transform:uppercase ;
+      font-weight: bold;
+      transition: background-color 300ms;
+  }
+  
+  .info button:hover {
+    background-color: black;
+      border-radius: 7px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      text-align: center;
+      text-transform:uppercase ;
+      font-weight: bold;
+      transition: background-color 300ms;
+  }
+  
+  .image {
+    width: 70%; /* L'image prend 70% du cadre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin : 15px; /* Marge autour de l'image */
+    border-radius: 10px; /* Bords arrondis de l'image */
+    overflow: hidden; /* Empêche l'image de déborder */
+  }
+  
+  .image img {
+    width: 100%; /* L'image remplit l'espace disponible dans .image */
+    height: auto; /* Hauteur ajustée automatiquement */
+    object-fit: cover; /* Couvre la zone sans déformer */
+    border-radius: 10px; /* Bords arrondis pour l'image elle-même */
+  }
+  .h2{
+    text-align: center;
+    color: #333;
+    font-size: 24px; /* Ajoutez la taille de la police que vous souhaitez ici */
+    padding-bottom: 20px;
+    margin-left: 15px;
+    color: #333;}
+
+/**/
+  

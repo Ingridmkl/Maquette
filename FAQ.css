@@ -46,6 +46,21 @@ nav {
     cursor: default;
 }
 
+img.centered {
+    display: block; /* Permet d'utiliser les marges automatiques */
+    margin: 0 auto; /* Centre horizontalement */
+    max-width: 30%; /* Assure que l'image ne dépasse pas */
+    height: auto; /* Maintient le ratio */
+    border-radius: 10px;
+}
+
+.scrollable {
+    max-height: 400px; /* Définir une hauteur maximale */
+    overflow-y: auto; /* Permet le défilement vertical */
+    overflow-x: hidden; /* Évite le défilement horizontal */
+}
+
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -104,6 +119,8 @@ details p {
     max-width: 100%; /* Empêche le contenu de déborder */
     overflow: hidden; /* Évite le débordement */
 }
+
+
 
 
 
