@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 02 mai 2024 à 17:59
+-- Généré le : jeu. 02 mai 2024 à 20:37
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
 
@@ -75,7 +75,7 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`IDclient`, `Nom`, `Prénom`, `Email`, `Téléphone`, `Date_de_naissance`, `Mot_de_passe`) VALUES
-(1, 'Justin', 'Clara', 'clarajustin@gmail.com', '0101010101', '1997-04-09', 'password');
+(1, 'Justin', 'Clara', 'clarajustin@gmail.com', '0101010101', '1997-04-09', 'password'),
 
 -- --------------------------------------------------------
 
@@ -212,9 +212,7 @@ ALTER TABLE `restaurateur`
 -- Index pour la table `réservation`
 --
 ALTER TABLE `réservation`
-  ADD PRIMARY KEY (`IDreservation`),
-  ADD KEY `NumClient` (`NumClient`),
-  ADD KEY `NumResto` (`NumResto`);
+  ADD PRIMARY KEY (`IDreservation`);
 
 --
 -- Index pour la table `valeur`
