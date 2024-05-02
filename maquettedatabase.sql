@@ -76,7 +76,6 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`IDclient`, `Nom`, `Prénom`, `Email`, `Téléphone`, `Date_de_naissance`, `Mot_de_passe`) VALUES
 (1, 'Justin', 'Clara', 'clarajustin@gmail.com', '0101010101', '1997-04-09', 'password'),
-(2, 'Moukala', 'Ingrid', 'irimouk@gmail.com', '0101010101', '1997-04-09', 'password');
 
 -- --------------------------------------------------------
 
