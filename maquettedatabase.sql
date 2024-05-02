@@ -41,7 +41,7 @@ CREATE TABLE `administrateur` (
 --
 
 INSERT INTO `administrateur` (`IDadmin`, `Nom`, `Prénom`, `Email`, `Téléphone`, `Mot_de_passe`) VALUES
-(0, 'Audesign', 'Optim\'eatCreators', 'groupeaudesign@gmail.com', '0600000000', 'optimeat');
+(0, 'Audesign', 'OptimeatCreators', 'groupeaudesign@gmail.com', '0600000000', 'optimeat');
 
 -- --------------------------------------------------------
 
