@@ -79,88 +79,46 @@
         </div>
     </section>
     <section id="Recherche">
-        <h1>Nos Partenaires</h1>
-        <a href="Search.">
-            <div class="tamp">
-                <form>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="" id="search-item" placeholder="Recherche partenaires">
-                </form>
-                <div class="product-list">
-                    <div class="product">
-                        <img src="./Search-base/Image_Mosuke1.png" alt="">
-                        <div class="p-details">
-                            <h2>MOSUKE</h2>
-                            <h6>Paris, 11 Rue Raymond Losserand</h6>
-                        </div>
-                        <div class="reservation">
-                            <a href="https://mosuke-restaurant.com/restaurant/"><i class="fa-solid fa-utensils"></i></a>
-                            <p class="top">Le Restaurant!</p>
-                            <hr>
-                            <a href=""><i class="fa-solid fa-calendar-days"></i></a>
-                            <p class="bottom">Reserver!</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="./Search-base/ZHAO.png" alt="">
-                        <div class="p-details">
-                            <h2>ZHAO</h2>
-                            <h6>Paris</h6>
-                        </div>
-                        <div class="reservation">
-                            <a href="https://www.zhaogroupe.com/"><i class="fa-solid fa-utensils"></i></a>
-                            <p class="top">Le Restaurant!</p>
-                            <hr>
-                            <a href=""><i class="fa-solid fa-calendar-days"></i></a>
-                            <p class="bottom">Reserver!</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="./Search-base/le-bayadere-bar.jpg" alt="">
-                        <div class="p-details">
-                            <h2>LE BAYADERE</h2>
-                            <h6>Paris</h6>
-                        </div>
-                        <div class="reservation">
-                            <a href="https://www.restaurantlebayadere.com/"><i class="fa-solid fa-utensils"></i></a>
-                            <p class="top">Le Restaurant!</p>
-                            <hr>
-                            <a href=""><i class="fa-solid fa-calendar-days"></i></a>
-                            <p class="bottom">Reserver!</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="./Search-base/AKABEKO.jpg" alt="">
-                        <div class="p-details">
-                            <h2>AKABEKO</h2>
-                            <h6>Paris</h6>
-                        </div>
-                        <div class="reservation">
-                            <a href="https://akabekorestaurant.com/"><i class="fa-solid fa-utensils"></i></a>
-                            <p class="top">Le Restaurant!</p>
-                            <hr>
-                            <a href=""><i class="fa-solid fa-calendar-days"></i></a>
-                            <p class="bottom">Reserver!</p>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="./Search-base/Image_Mosuke1.png" alt="">
-                        <div class="p-details">
-                            <h2>MOSUKE</h2>
-                            <h6>Paris</h6>
-                        </div>
-                        <div class="reservation">
-                            <a href="https://mosuke-restaurant.com/restaurant/"><i class="fa-solid fa-utensils"></i></a>
-                            <p class="top">Le Restaurant!</p>
-                            <hr>
-                            <a href=""><i class="fa-solid fa-calendar-days"></i></a>
-                            <p class="bottom">Reserver!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </section>
+    <h1>Nos Partenaires</h1>
+    <div class="tamp">
+        <form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-item" placeholder="Recherche partenaires">
+        </form>
+        <div class="product-list">
+            <?php
+            include 'Connexion_BDD.php';  // Assurez-vous que ce fichier configure correctement votre connexion à la base de données
+
+            $sql = "SELECT Idresto, Nom, Adresse, SiteWeb FROM restaurant";  // Ajoutez Idresto à la requête
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="product">';
+                    echo '<img src="./Search-base/default-image.png" alt="Image de ' . htmlspecialchars($row["Nom"]) . '">';  // Remplacez le chemin si nécessaire
+                    echo '<div class="p-details">';
+                    echo '<h2>' . htmlspecialchars($row["Nom"]) . '</h2>';
+                    echo '<h6>' . htmlspecialchars($row["Adresse"]) . '</h6>';
+                    echo '</div>';
+                    echo '<div class="reservation">';
+                    echo '<a href="' . htmlspecialchars($row["SiteWeb"]) . '"><i class="fa-solid fa-utensils"></i></a>';
+                    echo '<p class="top">Le Restaurant!</p>';
+                    echo '<hr>';
+                    echo '<a href="reservation.php?resto_id=' . htmlspecialchars($row["Idresto"]) . '"><i class="fa-solid fa-calendar-days"></i></a>';  // Utiliser htmlspecialchars pour plus de sécurité
+                    echo '<p class="bottom">Reserver!</p>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>Aucun restaurant partenaire trouvé.</p>";
+            }
+            $conn->close();
+            ?>
+        </div>
+    </div>
+</section>
+
+
     
     <footer>
         <div class="footer-container">
