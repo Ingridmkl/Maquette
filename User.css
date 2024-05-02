@@ -1,0 +1,154 @@
+.welcome_message{
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    margin-left: 375px;
+    margin-top: 30px;
+
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.logout button{
+    background-color: transparent;
+    border: 1.7px solid black ;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-transform:uppercase ;
+    transition: background-color 300ms;
+}
+
+.logout button:hover{
+    color: #fff;
+    background-color: black;
+
+}
+
+.logout{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 130px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 130px; /* Ajustez la hauteur ici */
+    width: 130px; /* Ajustez la largeur ici */
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+/*CSS des fichier .php FIN */
+
+
+/*CSS new dashboard*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+
+.side-nav{
+    grid-column: 1;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 30px 15px;
+    background: lightgray;
+    backdrop-filter: blur(5px);
+}
+
+.right-content{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+}
+
+.welcome_message, .logo, .logout{
+    grid-row: 1;
+}
+
+.dashboard{
+    grid-row: 2;
+    margin-top: 85px;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user h2{
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.user-img{
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+    padding: 40px 15px;
+}
+
+ul li{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+ul li p{
+    white-space: nowrap;
+    text-align: center;
+}
+
+ul li a:hover{
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.info, .graph, .parameters, .soundInfo, .playlist, .restoManagement{
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px 10px;
+    box-shadow: 0 0 10px rgba(0,0 ,0, .2);
+}
+
+.playlist img{
+    margin-left: auto;
+    margin-right: auto;
+}
+

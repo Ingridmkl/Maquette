@@ -1,5 +1,4 @@
 <?php
-
 //c'est le code pour faire le lien avec la bdd
 
 $servername = "localhost";
