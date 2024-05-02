@@ -100,7 +100,9 @@ CREATE TABLE `réservation` (
   `IDreservation` int(11) UNSIGNED NOT NULL,
   `Date` date NOT NULL,
   `Heure` time NOT NULL,
-  `Nombre_de_personne` int(11) NOT NULL
+  `Nombre_de_personne` int(11) NOT NULL,
+  `NumClient` int(11) UNSIGNED NOT NULL,
+  `NumResto` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
