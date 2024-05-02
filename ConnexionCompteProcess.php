@@ -44,14 +44,16 @@
     
             if ($result_restaurant->num_rows > 0) {
                 $restaurant = $result_restaurant->fetch_assoc();
-    
+            
+                // Assurez-vous que ces noms de clés correspondent exactement à ceux que vous utilisez pour accéder aux données plus tard.
                 $_SESSION['prenom'] = $user['Prénom'];
                 $_SESSION['nom'] = $user['nom'];
                 $_SESSION['IDrestaurant'] = $user['IDrestaurateur'];
-                $_SESSION['email'] = $_POST['email'];
+                $_SESSION['email'] = $email;  // Assurez-vous d'assigner la variable email correctement ici
                 $_SESSION['Adresse'] = $restaurant['Adresse'];
                 $_SESSION['Nom'] = $restaurant['Nom'];
                 $_SESSION['SiteWeb'] = $restaurant['SiteWeb'];
+            
             }
             echo "<div class='welcome_message'>Welcome to Optim'eat, " . $user['Prénom'] . " " . $user['nom'] . " !</div>";
         } else {
@@ -66,13 +68,14 @@
     <div class="dashboard">
         <div class="user">
             <h2>Informations utilisateur</h2> <!--les informations seront transmises avec php, mais par soucis de manque de temps -->
-            <h3>Compte client numéro <?php echo $_SESSION['IDrestaurant']; ?></h3> <!--modifier pour vadiable iduser !! à appeler sur php-->
-            <p>Nom: <?php echo $_SESSION['nom']; ?></p>
-            <p>Prénom: <?php echo $_SESSION['prenom']; ?></p>
-            <p>Nom du restaurant: <?php echo $_SESSION['Nom']; ?></p>
-            <p>Adresse du restaurant: <?php echo $_SESSION['Adresse']; ?></p>
-            <p>Site web du restaurant: <?php echo $_SESSION['SiteWeb']; ?></p>
-            <p>Email: <?php echo $_SESSION['prenom']; ?></p>
+            <h3>Compte client numéro <?php echo isset($_SESSION['IDrestaurant']) ? $_SESSION['IDrestaurant'] : 'Non disponible'; ?></h3>
+<p>Nom: <?php echo isset($_SESSION['nom']) ? $_SESSION['nom'] : 'Non disponible'; ?></p>
+<p>Prénom: <?php echo isset($_SESSION['prenom']) ? $_SESSION['prenom'] : 'Non disponible'; ?></p>
+<p>Nom du restaurant: <?php echo isset($_SESSION['Nom']) ? $_SESSION['Nom'] : 'Non disponible'; ?></p>
+<p>Adresse du restaurant: <?php echo isset($_SESSION['Adresse']) ? $_SESSION['Adresse'] : 'Non disponible'; ?></p>
+<p>Site web du restaurant: <?php echo isset($_SESSION['SiteWeb']) ? $_SESSION['SiteWeb'] : 'Non disponible'; ?></p>
+<p>Email: <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Non disponible'; ?></p>
+
         </div>
         <div class="graph">
             <h2>Sonore Level by time</h2>
