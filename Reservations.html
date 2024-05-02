@@ -50,11 +50,15 @@
 
     <section id="booking">
         <div class="form-box">
-            <form>
+            <form action="traitement_reservations.php" method="post">
                 <p>Réservation</p>
                 <div class="content">
                     <div class="box">
-                        <input type="text" placeholder="Nom complet" name="nom">
+                        <input type="text" placeholder="Nom" name="nom">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="box">
+                        <input type="text" placeholder="Prénom" name="prenom">
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="box">
