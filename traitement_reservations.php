@@ -157,6 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_reservations = $row_count["count"] + 1;
 
     // Récupération des données du formulaire
+    $resto = isset($_POST['restaurant']) ? $_POST['restaurant'] : '';
     $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
     $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
@@ -165,6 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = isset($_POST['date']) ? $_POST['date'] : '';
 
     // Afficher les valeurs pour vérification
+    echo "Resto: " . $resto . "<br>";
     echo "Nom: " . $nom . "<br>";
     echo "Prénom: " . $prenom . "<br>";
     echo "Email: " . $email . "<br>";
@@ -172,8 +174,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Temps: " . $temps . "<br>";
     echo "Date: " . $date . "<br>";
 
+    //Récupération de l'id resto
+    $get_id= "SELECT Idresto FROM restaurant WHERE Nom ='$resto'";
+    $res_get_id = $conn->query($get_id);
+    if ($res_get_id->num_rows > 0) {
+        $row = $result_get_resto_id->fetch_assoc();
+        $idresto = $row["Idresto"];
+    } else {
+        echo "Erreur: Aucun restaurant trouvé avec ce nom";
+        exit();
+    }
+
     // Insertion des données dans la table réservation
-    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne) VALUES ($nombre_reservations, '$date', '$temps', $nombre)";
+    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumClient, NumResto) 
+    VALUES ($nombre_reservations, '$date', '$temps', $nombre, 1, $idresto)";
     
     if ($conn->query($sql) === TRUE) {
         echo "Réservation effectuée avec succès";
