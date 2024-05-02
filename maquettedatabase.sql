@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 02 mai 2024 à 20:37
+-- Généré le : ven. 03 mai 2024 à 01:24
 -- Version du serveur : 10.4.32-MariaDB
--- Version de PHP : 8.0.30
+-- Version de PHP : 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -75,7 +75,7 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`IDclient`, `Nom`, `Prénom`, `Email`, `Téléphone`, `Date_de_naissance`, `Mot_de_passe`) VALUES
-(1, 'Justin', 'Clara', 'clarajustin@gmail.com', '0101010101', '1997-04-09', 'password'),
+(1, 'Justin', 'Clara', 'clarajustin@gmail.com', '0101010101', '1997-04-09', 'password');
 
 -- --------------------------------------------------------
 
@@ -212,7 +212,9 @@ ALTER TABLE `restaurateur`
 -- Index pour la table `réservation`
 --
 ALTER TABLE `réservation`
-  ADD PRIMARY KEY (`IDreservation`);
+  ADD PRIMARY KEY (`IDreservation`),
+  ADD KEY `réservation_ibfk_1` (`NumClient`),
+  ADD KEY `réservation_ibfk_2` (`NumResto`);
 
 --
 -- Index pour la table `valeur`
