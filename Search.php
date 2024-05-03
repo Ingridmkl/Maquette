@@ -73,7 +73,9 @@
                         echo '<h6>' . htmlspecialchars($row["Adresse"]) . '</h6>';
                         echo '</div>';
                         echo '<div class="reservation">';
-                        echo '<a href="' . htmlspecialchars($row["SiteWeb"]) . '"><i class="fa-solid fa-utensils"></i></a>';
+                        $siteWeb = $row['SiteWeb'];
+                        $siteWeb = str_replace('http://localhost/Maquette/', '', $siteWeb);
+                        echo '<a href="https://www.' . htmlspecialchars($siteWeb) . '"><i class="fa-solid fa-utensils"></i></a>';
                         echo '<p class="top">Le Restaurant!</p>';
                         echo '<hr>';
                         echo '<a href="Reservations.php?nomRestaurant=' . urlencode($row["Nom"]) . '&id=' . $row["Idresto"] . '"><i class="fa-solid fa-calendar-days"></i></a>';
