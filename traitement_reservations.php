@@ -56,8 +56,6 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         //Affichage des données reçues du formulaire
-        echo "Données reçues : <br>";
-        var_dump($_POST);
 
 
         //On récupère les infos de la table reservations afin d'avoir l'id de la réservation
@@ -74,14 +72,6 @@
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
         $temps = isset($_POST['temps']) ? $_POST['temps'] : '';
         $date = isset($_POST['date']) ? $_POST['date'] : '';
-
-        // Afficher les valeurs pour vérification
-        echo "Nom: " . $nom . "<br>";
-        echo "Prénom: " . $prenom . "<br>";
-        echo "Email: " . $email . "<br>";
-        echo "Nombre: " . $nombre . "<br>";
-        echo "Temps: " . $temps . "<br>";
-        echo "Date: " . $date . "<br>";
 
         //Récupération de l'id resto
         $get_id= "SELECT Idresto FROM restaurant WHERE Nom ='$resto'";
@@ -117,7 +107,30 @@
             <p class="text1">Bonjour <?php echo $_POST['nom']; ?> <?php echo $_POST['prenom']; ?>!</p>
             <p class="text2">Merci d'avoir réservé chez <?php echo $_POST['restaurant']; ?>.</p>
             <p class="text2">Vous trouverez ci-dessous le récapitulatif de votre réservation.</p>
+            <div class="recap2">
+                <p class="recap-text">
+                    Chez, <?php echo $_POST['restaurant']; ?>,
+                </p>
+                <p class="recap-text">
+                    Par, <?php echo $_POST['prenom']; ?> <?php echo $_POST['nom']; ?>,
+                </p>
+                <p class="recap-text">
+                    Le, <?php echo $_POST['date']; ?>
+                </p>
+                <p class="recap-text">
+                    A, <?php echo $_POST['temps']; ?>
+                </p>
+                <p class="recap-text">
+                    Pour, <?php echo $_POST['restaurant']; ?> personnes.
+                </p>
+                <p><br></p>
+            </div>
+            <p class="text2">A très bientôt!</p>
+            <u>
+                <a href="index.html">Revenir en arrière</a>
+            </u>
         </div>
+        
     </section>
 
     <footer>

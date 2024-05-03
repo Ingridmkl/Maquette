@@ -287,21 +287,43 @@ footer{
 .recap-box{
     background-color: white;
     border-radius: 10px;
-    width: 75%;
+    width: auto;
     height: auto;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 40px;
 }
 
 .recap-box .text1{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
     color: #000;
+    margin: 20px 0;
 }
 
 .recap-box .text2{
-    font-size: 10px;
+    font-size: 20px;
     color: rgb(17, 17, 17);
+}
+
+.recap2{
+    margin-top: 30px;
+}
+
+.recap-box u{
+    text-decoration:none ;
+    margin-left: 450px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.recap-box u a{
+    color:rgb(61, 61, 189);
+    text-decoration: underline rgb(61, 61, 189) ;
+}
+
+.recap-box u a:hover{
+    color: #833AB4;
+    text-decoration: underline #833AB4;
 }
