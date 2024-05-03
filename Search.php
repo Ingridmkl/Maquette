@@ -66,7 +66,7 @@
                     // affichage des données de chaque ligne
                     while($row = $result->fetch_assoc()) {
                         echo '<div class="product">';
-                        echo '<img src="./Search-base/default-image.png" alt="Image de ' . htmlspecialchars($row["Nom"]) . '">';
+                        echo '<img src="./Ressources/' . htmlspecialchars($row["Nom"]) . '.jpg" alt="Image de ' . htmlspecialchars($row["Nom"]) . '">';
                         echo '<div class="p-details">';
                         echo '<h2>' . htmlspecialchars($row["Nom"]) . '</h2>';
                         echo '<h6>' . htmlspecialchars($row["Adresse"]) . '</h6>';
