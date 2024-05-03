@@ -65,6 +65,7 @@
                 if ($result->num_rows > 0) {
                     // affichage des données de chaque ligne
                     while($row = $result->fetch_assoc()) {
+                        $nomRestaurant = htmlspecialchars($row["Nom"]); // Stocker le nom du restaurant
                         echo '<div class="product">';
                         echo '<img src="./Ressources/' . htmlspecialchars($row["Nom"]) . '.jpg" alt="Image de ' . htmlspecialchars($row["Nom"]) . '">';
                         echo '<div class="p-details">';
@@ -75,7 +76,7 @@
                         echo '<a href="' . htmlspecialchars($row["SiteWeb"]) . '"><i class="fa-solid fa-utensils"></i></a>';
                         echo '<p class="top">Le Restaurant!</p>';
                         echo '<hr>';
-                        echo '<a href="reservation.php?id=' . $row["Idresto"] . '"><i class="fa-solid fa-calendar-days"></i></a>';
+                        echo '<a href="Reservations.php?nomRestaurant=' . urlencode($row["Nom"]) . '&id=' . $row["Idresto"] . '"><i class="fa-solid fa-calendar-days"></i></a>';
                         echo '<p class="bottom">Reserver!</p>';
                         echo '</div>';
                         echo '</div>';

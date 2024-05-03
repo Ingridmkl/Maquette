@@ -48,13 +48,22 @@
         </div> 
     </nav>
 
+    <?php
+    // Vérifie si le paramètre nomRestaurant est défini dans l'URL
+    if (isset($_GET['nomRestaurant'])) {
+        $nomRestaurant = $_GET['nomRestaurant'];
+    } else {
+        $nomRestaurant = "Nom du restaurant non spécifié";
+    }
+    ?>
+
     <section id="booking">
         <div class="form-box">
             <form action="traitement_reservations.php" method="post">
                 <p>Réservation</p>
                 <div class="content">
                     <div class="box">
-                        <input type="text" readonly value="chez baba" name="restaurant">
+                        <input type="text" readonly value="<?php echo htmlspecialchars($nomRestaurant); ?>" name="restaurant">
                         <i class="fa-solid fa-shop"></i>
                     </div>
                     <div class="box">
