@@ -121,7 +121,7 @@
                     A, <?php echo $_POST['temps']; ?>
                 </p>
                 <p class="recap-text">
-                    Pour, <?php echo $_POST['restaurant']; ?> personnes.
+                    Pour, <?php echo $_POST['nombre']; ?> personnes.
                 </p>
                 <p><br></p>
             </div>
