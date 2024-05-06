@@ -11,13 +11,16 @@ $email = $_POST['email'];
 $telephone = $_POST['numTel'];
 $password = $_POST['password'];
 
-// Insérer les données dans la table 'restaurant'
-$sql_restaurant = "INSERT INTO restaurant (Adresse, Nom, SiteWeb) VALUES ('$adresse_etablissement', '$nom_etablissement', '$site_web')";
-$restaurantCreated = $conn->query($sql_restaurant);
 
 // Insérer les données dans la table 'restaurateur'
 $sql_restaurateur = "INSERT INTO restaurateur (Prénom, nom, email, mot_de_passe, Téléphone) VALUES ('$prenom', '$nom', '$email', '$password', '$telephone')";
 $restaurateurCreated = $conn->query($sql_restaurateur);
+
+$proprietaire = $conn->insert_id;
+
+// Insérer les données dans la table 'restaurant'
+$sql_restaurant = "INSERT INTO restaurant (Adresse, Nom, SiteWeb, IDproprio) VALUES ('$adresse_etablissement', '$nom_etablissement', '$site_web','$proprietaire')";
+$restaurantCreated = $conn->query($sql_restaurant);
 
 if ($restaurantCreated === TRUE && $restaurateurCreated === TRUE) {
     echo "<script>alert('Votre compte a bien été créé ! Vous pouvez vous connecter !'); window.location = 'http://localhost/Maquette/PageConnexion.html';</script>";

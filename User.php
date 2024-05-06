@@ -55,7 +55,7 @@
                 <p>Nom du restaurant: <?php echo $_SESSION['Nom']; ?></p>
                 <p>Adresse du restaurant: <?php echo $_SESSION['Adresse']; ?></p>
                 <p>Site web du restaurant: <?php echo $_SESSION['SiteWeb']; ?></p>
-                <p>Email: <?php echo $_SESSION['prenom']; ?></p>
+                <p>Email: <?php echo $_SESSION['email']; ?></p>
             </div>
             <div id="anchor2" class="graph">
                 <h2>Sonore Level by time</h2>

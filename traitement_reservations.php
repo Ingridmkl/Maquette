@@ -127,7 +127,7 @@
             </div>
             <p class="text2">A très bientôt!</p>
             <u>
-                <a href="index.html">Revenir en arrière</a>
+                <a href="index.php">Revenir en arrière</a>
             </u>
         </div>
         
