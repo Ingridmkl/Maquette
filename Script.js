@@ -5,9 +5,6 @@ function clickmenu(){
     icon.classList.toggle("open");
 }
 
-function clickbutton(){
-}
-
 const search = () =>{
     const searchbox = document.getElementById("search-item").value.toUpperCase();
     const items = document.getElementById("product-list")
@@ -27,4 +24,7 @@ const search = () =>{
             }
         }
     }
+}
+
+function clickbutton(){
 }
