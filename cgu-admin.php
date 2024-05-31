@@ -72,7 +72,48 @@
                 <h2>8. Publication par l'Utilisateur</h2>
                 <p id="publication-utilisateur-text"><?php echo htmlspecialchars($row['publication_utilisateur']); ?></p>
             </section>
+            <button type="submit" style=" width: 30%;  height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;" onclick="enableEditing()">Modifier</button>
+
         </div>
+
+        <form id="cgu-form" action="maj-cgu.php" method="POST" style="display: none;">
+            <h1>Modifier les Conditions Générales d'Utilisation</h1>
+            <section>
+                <h2>1. Introduction</h2>
+                <textarea id="introduction" name="introduction" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['introduction']); ?></textarea>            
+            </section>
+            <section>
+                <h2>2. Mentions légales</h2>
+                <textarea id="mentions_legales" name="mentions_legales" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['mentions_legales']); ?></textarea>
+            </section>
+            <section>
+                <h2>3. Accès au site</h2>
+                <textarea id="acces_site" name="acces_site" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['acces_site']); ?></textarea>
+            </section>
+            <section>
+                <h2>4. Collecte des données</h2>
+                <textarea id="collecte_donnees" name="collecte_donnees" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['collecte_donnees']); ?></textarea>
+            </section>
+            <section>
+                <h2>5. Propriété Intellectuelle</h2>
+                <textarea id="propriete_intellectuelle" name="propriete_intellectuelle" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['propriete_intellectuelle']); ?></textarea>
+            </section>
+            <section>
+                <h2>6. Responsabilité</h2>
+                <textarea id="responsabilite" name="responsabilite" style="white-space:normal; height: 140px; width: 100%;"><?php echo htmlspecialchars($row['responsabilite']); ?></textarea>
+            </section>
+            <section>
+                <h2>7. Liens hypertextes</h2>
+                <textarea id="liens_hypertextes" name="liens_hypertextes" style="white-space:normal; height: 100px; width: 100%;"><?php echo htmlspecialchars($row['liens_hypertextes']); ?></textarea>
+            </section>
+            <section>
+                <h2>8. Publication par l'Utilisateur</h2>
+                <textarea id="publication_utilisateur" name="publication_utilisateur" style="white-space:normal; height: 170px; width: 100%;"><?php echo htmlspecialchars($row['publication_utilisateur']); ?></textarea>
+            </section>
+            <button type="submit" style=" width: 30%;  height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;">Enregistrer</button>
+        </form>
+        <script src="cgu.js"></script>
+
     </div>
     <footer>
         <div class="footer-container">

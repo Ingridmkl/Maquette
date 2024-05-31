@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         );
 
         if ($stmt->execute()) {
-            header("Location: cgu.php");
+            header("Location: cgu-admin.php");
             echo "CGU mises à jour avec succès.";
         } else {
             echo "Erreur lors de la mise à jour des CGU : " . $stmt->error;
