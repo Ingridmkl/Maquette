@@ -37,6 +37,8 @@ nav{
       
 }
 
+
+
 a {
     color: #000;
     text-decoration: none;
@@ -59,6 +61,24 @@ a:hover {
 
 .logo:hover{
     cursor: default;
+}
+
+.login button{
+    background-color: transparent;
+    border: 1.7px solid black ;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-transform:uppercase ;
+    transition: background-color 300ms;
+}
+
+.login button:hover{
+    color: #fff;
+    background-color: #000;
+
 }
 
 /*CSS pour le MENU : FIN*/
