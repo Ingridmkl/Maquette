@@ -50,6 +50,14 @@
 
     <?php
     include 'Connexion_BDD.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
+
+    require './phpmailer/src/Exception.php';
+    require './phpmailer/src/PHPMailer.php';
+    require './phpmailer/src/SMTP.php';
+
     // Démarrer la session
     session_start();
 
@@ -88,6 +96,8 @@
     $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumClient, NumResto) 
     VALUES ($nombre_reservations, '$date', '$temps', $nombre, 1, $idresto)";
     
+    echo $sql;
+    
     if ($conn->query($sql) === TRUE) {
         echo "Réservation effectuée avec succès";
     } else {
@@ -97,11 +107,54 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+
+    // Envoi mail récapitulatif de la reservation
+    $mail = new PHPMailer(true);
+
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'groupeaudesign@gmail.com';//@ compte gmail
+    $mail->Password = 'optimeat';//mdp compte gmail
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+
+    $mail->setFrom('groupeaudesign@gmail.com');
+
+    $mail->addAddress($email);
+
+    $mail->isHTML(true);
+    
+    $mail->Subject = "Récapitulatif de votre réservation";
+
+    $mail->Body = "
+        <h2>Récapitulatif de votre réservation</h2>
+        <p>Bonjour $nom $prenom,</p>
+        <p>Merci d'avoir réservé chez $resto.</p>
+        <p>Voici le récapitulatif de votre réservation :</p>
+        <ul>
+            <li>Restaurant : $resto</li>
+            <li>Nom : $nom</li>
+            <li>Prénom : $prenom</li>
+            <li>Date : $date</li>
+            <li>Heure : $temps</li>
+            <li>Nombre de personnes : $nombre</li>
+        </ul>
+        <p>A très bientôt!</p>
+    ";
+
+    if(!$mail->send()) {
+        echo 'Mail non envoyé.';
+        echo 'Erreur: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Mail envoyé avec succès';
+    }
+
     }
 
     $conn->close();
     ?>
-
+    <!-- Affichage d'un récap de la reservation sur la page -->
     <section id="recap">
         <div class="recap-box">
             <p class="text1">Bonjour <?php echo $_POST['nom']; ?> <?php echo $_POST['prenom']; ?>!</p>
