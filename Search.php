@@ -112,7 +112,7 @@
                     <li><a class="footer-link" href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a class="footer-link" href="contact.html">Formulaire</a></li>
                     <li><a class="footer-link" href="FAQ.html">FAQ</a></li>
-                    <li><a class="footer-link" href="cgu.html">CGU</a></li>
+                    <li><a class="footer-link" href="cgu.php">CGU</a></li>
                 </ul>
             </div>
             <div class="colb">

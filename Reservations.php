@@ -116,6 +116,7 @@
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>
                     <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="cgu.php">CGU</a></li>
                 </ul>
             </div>
             <div class="colb">
