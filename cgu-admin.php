@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="cgu.css">
     <link rel="stylesheet" href="media.css">
     <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
+    <script src="cgu.js"></script>
+
 
 </head>
 <body>
@@ -72,7 +74,9 @@
                 <h2>8. Publication par l'Utilisateur</h2>
                 <p id="publication-utilisateur-text"><?php echo htmlspecialchars($row['publication_utilisateur']); ?></p>
             </section>
-            <button type="submit" style=" width: 30%;  height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;" onclick="enableEditing()">Modifier</button>
+            <button type="submit" style=" width: 30%; height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;" onclick="enableEditing()">Modifier</button>
+            <br>
+            <a href="Administrateur.php" style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-top: 30px; margin-left: 35%;">Retourner sur la page admin</a>
 
         </div>
 
@@ -112,7 +116,6 @@
             </section>
             <button type="submit" style=" width: 30%;  height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;">Enregistrer</button>
         </form>
-        <script src="cgu.js"></script>
 
     </div>
     <footer>
