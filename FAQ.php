@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="FAQ.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap' rel="stylesheet">
     <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
+    <style>
+        
+        #button-container {
+            display: flex;
+            gap: 10px; 
+        }
+
+        #add-question-button, #modify-button {
+            margin: 20px auto; 
+            display: block; 
+            padding: 10px 20px;
+            border: 2px solid black; 
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            transition: all 0.3s ease; 
+        }
+
+        #add-question-button:hover, #modify-button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        
+    </style>
 </head>
+
+
 <body>
     <nav id="desktop-nav">
         <div class="logo">
@@ -24,7 +55,6 @@
     </nav>
     <h1 class="flex-center">Foire aux questions</h1>
     <br>
-
 
     <div class="faq" id="faq-section">
 
@@ -84,12 +114,32 @@
                 <summary>Optim'Eat est-il adapté à mon restaurant ?</summary>
                 <p>Optim'Eat est conçu pour s'adapter à une large gamme de restaurants, des petits bistrots aux grands établissements. 
                     <br><br>
-                    <img src="./Ressources/doubleResto.JPG" alt="Restaurant" class="centered">
+                    <img src="./Ressources/doubleResto.jpeg" alt="Restaurant" class="centered">
                     <br>
-                    Pour savoir s'il vous convient, contactez-nous pour une consultation personnalisée.</p>
+                    Pour savoir s'il vous convient, contactez-nous pour une consultation personnalisée.
+                </p>
             </details>
         </div>
 
+    
+        
+        <div id="button-container">
+            <button id="add-question-button">Ajouter</button>
+            <button id="modify-button">Modifier</button>
+        </div>
+
+    </div>
+
+    <div class="modify-faq" id="modify-faq">
+        <h3 id="modify-title">Ajouter une question</h3>
+        <form id="modify-faq-form">
+            <label for="question">Question :</label><br>
+            <input type="text" id="question" name="question" required><br><br>
+            <label for="answer">Réponse :</label><br>
+            <textarea id="answer" name="answer" required></textarea><br><br>
+            <button type="submit" id="add-button">Ajouter</button>
+            <button type="button" id="delete-button" style="display: none;">Supprimer</button>
+        </form>
     </div>
 
     <footer>
@@ -111,7 +161,9 @@
                     <li><a href="Partenaires.html">Nos partenaires</a></li>
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>
+                    <li><a href="FAQ.php">FAQ</a></li>
                     <li><a href="cgu.html">CGU</a></li>
+                </ul>
             </div>
             <div class="colb">
                 <h3>Contactez-nous!</h3>
@@ -121,19 +173,116 @@
     </footer>
 
     <script>
-        const allDetails = document.querySelectorAll('details');
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqSection = document.getElementById('faq-section');
+            const modifyForm = document.getElementById('modify-faq-form');
+            const modifyFaqDiv = document.getElementById('modify-faq');
+            const addQuestionButton = document.getElementById('add-question-button');
+            const modifyButton = document.getElementById('modify-button');
+            const questionInput = document.getElementById('question');
+            const answerInput = document.getElementById('answer');
+            const deleteButton = document.getElementById('delete-button');
+            const modifyTitle = document.getElementById('modify-title');
+            const addButton = document.getElementById('add-button');
 
-        allDetails.forEach((details) => {
-            details.addEventListener('toggle', (event) => {
-                if (details.open) {
-                    allDetails.forEach((otherDetails) => {
-                        if (otherDetails !== details) {
-                            otherDetails.open = false;
-                        }
-                    });
+            let currentDetails = null;
+            let isAdding = false;
+
+            function attachToggleEvent(details) {
+                details.addEventListener('toggle', function(event) {
+                    if (details.open) {
+                        const allDetails = document.querySelectorAll('details');
+                        allDetails.forEach((otherDetails) => {
+                            if (otherDetails !== details) {
+                                otherDetails.open = false;
+                            }
+                        });
+                    }
+                });
+            }
+
+            function initializeToggleEvents() {
+                const allDetails = document.querySelectorAll('details');
+                allDetails.forEach((details) => {
+                    attachToggleEvent(details);
+                });
+            }
+
+            initializeToggleEvents();
+
+            addQuestionButton.addEventListener('click', function() {
+                modifyTitle.textContent = "Ajouter une question";
+                modifyForm.reset();
+                addButton.textContent = "Ajouter";
+                currentDetails = null;
+                deleteButton.style.display = 'none';
+                modifyFaqDiv.style.display = 'block';
+                isAdding = true;
+            });
+
+            modifyButton.addEventListener('click', function() {
+                modifyTitle.textContent = "Modifier une question";
+                addButton.textContent = "Modifier";
+                modifyForm.reset();
+                currentDetails = null;
+                deleteButton.style.display = 'none';
+                modifyFaqDiv.style.display = 'block';
+                isAdding = false;
+            });
+
+            modifyForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                if (isAdding) {
+                    const detailsContainer = document.createElement('div');
+                    detailsContainer.className = 'details-container';
+
+                    const details = document.createElement('details');
+                    const summary = document.createElement('summary');
+                    summary.textContent = questionInput.value;
+                    const p = document.createElement('p');
+                    p.textContent = answerInput.value;
+
+                    details.appendChild(summary);
+                    details.appendChild(p);
+                    detailsContainer.appendChild(details);
+
+            
+                    faqSection.insertBefore(detailsContainer, document.getElementById('button-container'));
+                    attachToggleEvent(details);
+                } else if (currentDetails) {
+                    currentDetails.querySelector('summary').textContent = questionInput.value;
+                    currentDetails.querySelector('p').textContent = answerInput.value;
+                }
+
+                modifyForm.reset();
+                currentDetails = null;
+                eleteButton.style.display = 'none';
+                modifyFaqDiv.style.display = 'none';
+            });
+
+            faqSection.addEventListener('click', function(event) {
+                if (!isAdding && event.target.tagName.toLowerCase() === 'summary') {
+                    currentDetails = event.target.parentElement;
+                    questionInput.value = event.target.textContent;
+                    answerInput.value = currentDetails.querySelector('p').textContent;
+                    deleteButton.style.display = 'inline';
                 }
             });
+
+            deleteButton.addEventListener('click', function() {
+                if (currentDetails) {
+                    faqSection.removeChild(currentDetails.parentElement);
+                    modifyForm.reset();
+                    currentDetails = null;
+                    deleteButton.style.display = 'none';
+                    modifyFaqDiv.style.display = 'none';
+                }
+            });
+
+            deleteButton.style.display = 'none';
         });
+
     </script>
 </body>
 </html>
