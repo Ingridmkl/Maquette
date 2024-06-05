@@ -31,7 +31,7 @@
     include 'Connexion_BDD.php';
 
     // Récupération des utilisateurs
-    $query = $conn->query('SELECT Nom, Prénom, Email, Téléphone FROM restaurateur');
+    $query = $conn->query('SELECT Nom, Prénom, Email, Téléphone, IDrestaurateur FROM restaurateur');
     $restaurateurs = $query->fetch_all(MYSQLI_ASSOC);
 
     // Récupération des clients
@@ -39,14 +39,34 @@
     $clients = $query->fetch_all(MYSQLI_ASSOC);
     ?>
     <div class="container">
-        <h1>Informations Utilisateurs</h1>
+        <h1>Gestion de la FAQ</h1>
+        <div class="category">
+            <p>
+            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
+            <a href="#page de JD" id="delBtn">Modifier</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Gestion des CGU et mentions légales</h1>
+        <div class="category">
+            <p>
+            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles informations des las CGU et mentions légales
+            <a href="#page de JD" id="delBtn">Modifier</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Gestion des comptes utilisateurs</h1>
         <div class="category">
             <h2>Restaurateurs</h2>
             <?php foreach ($restaurateurs as $restaurateur): ?>
                 <p>Nom: <?= $restaurateur['Nom'] ?>
                 <br>Prénom: <?= $restaurateur['Prénom'] ?>
                 <br>Email: <?= $restaurateur['Email'] ?>
-                <br>Téléphone: <?= $restaurateur['Téléphone'] ?></p>
+                <br>Téléphone: <?= $restaurateur['Téléphone'] ?>
+                <a href="DeleteCompte.php?id=<?= $restaurateur['IDrestaurateur'] ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce compte ?');" id="delBtn">Supprimer</a>
+                </p>
                 <br>
             <?php endforeach; ?>
         </div>

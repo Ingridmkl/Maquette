@@ -139,7 +139,7 @@ ul li a{
     color: black;
 }
 
-.info, .graph, .parameters, .soundInfo, .playlist, .restoManagement{
+.info, .graph, .parameters, .soundInfo, .playlist, .restoManagement,.mdp{
     border: 3px solid black;
     border-radius: 5px;
     margin-top: 15px;
@@ -153,6 +153,20 @@ ul li a{
     margin-right: auto;
 }
 
+#MDPBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #999;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    
+}
 /*CSS pour +/-/modifications des restaurants*/
 
 /*CSS pour +/-/modifications des restaurants*/

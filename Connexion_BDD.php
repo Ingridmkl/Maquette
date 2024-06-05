@@ -5,7 +5,7 @@ $servername = "localhost";
 $username = "root";   /*si jamais ça ne marche pas, essaye de remplacer root par ton prénom 
                       (Ingrid, JD, Louis, Eliott ou Victor) et ajoute en mot de passe : G9Cdatabase */
 $password = "";
-$dbname = "maquettedatabase"; //à remettre en maquettedatabase pour les autres !!!!!
+$dbname = "databasewithoutfk"; //à remettre en maquettedatabase pour les autres !!!!!
 
 // Créer une connexion
 $conn = new mysqli($servername, $username, $password, $dbname);
