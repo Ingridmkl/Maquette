@@ -51,7 +51,7 @@
                     $_SESSION['Adresse'] = $restaurant['Adresse'];
                     $_SESSION['Nom'] = $restaurant['Nom'];
                     $_SESSION['SiteWeb'] = $restaurant['SiteWeb'];
-                    $_SESSION['mdp'] = $_POST['password'];
+                    $_SESSION['mdp'] = $user['mot_de_passe']; // Utiliser le nouveau mot de passe
                 }
 
                 header('Location: User.php');
