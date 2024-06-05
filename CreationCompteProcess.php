@@ -11,22 +11,28 @@ $email = $_POST['email'];
 $telephone = $_POST['numTel'];
 $password = $_POST['password'];
 
+$hashed_password = password_hash($password, PASSWORD_DEFAULT); //cryptage du mdp
 
-// Insérer les données dans la table 'restaurateur'
-$sql_restaurateur = "INSERT INTO restaurateur (Prénom, nom, email, mot_de_passe, Téléphone) VALUES ('$prenom', '$nom', '$email', '$password', '$telephone')";
-$restaurateurCreated = $conn->query($sql_restaurateur);
+// Préparer et exécuter la requête pour insérer les données dans la table 'restaurateur'
+$sql_restaurateur = "INSERT INTO restaurateur (Prénom, nom, email, mot_de_passe, Téléphone) VALUES (?, ?, ?, ?, ?)";
+$stmt = $conn->prepare($sql_restaurateur);
+$stmt->bind_param("sssss", $prenom, $nom, $email, $hashed_password, $telephone);
+$stmt->execute();
 
 $proprietaire = $conn->insert_id;
 
-// Insérer les données dans la table 'restaurant'
-$sql_restaurant = "INSERT INTO restaurant (Adresse, Nom, SiteWeb, IDproprio) VALUES ('$adresse_etablissement', '$nom_etablissement', '$site_web','$proprietaire')";
-$restaurantCreated = $conn->query($sql_restaurant);
+// Préparer et exécuter la requête pour insérer les données dans la table 'restaurant'
+$sql_restaurant = "INSERT INTO restaurant (Adresse, Nom, SiteWeb, IDproprio) VALUES (?, ?, ?, ?)";
+$stmt = $conn->prepare($sql_restaurant);
+$stmt->bind_param("sssi", $adresse_etablissement, $nom_etablissement, $site_web, $proprietaire);
+$stmt->execute();
 
-if ($restaurantCreated === TRUE && $restaurateurCreated === TRUE) {
+if ($stmt->affected_rows === 1) {
     echo "<script>alert('Votre compte a bien été créé ! Vous pouvez vous connecter !'); window.location = 'http://localhost/Maquette/PageConnexion.html';</script>";
 } else {
     echo "<script>alert('Une erreur est survenue lors de la création de votre compte, veuillez recommencer.'); window.location = 'http://localhost/Maquette/PageCreationCompte.html';</script>";
 }
 
+$stmt->close();
 $conn->close();
 ?>

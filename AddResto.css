@@ -1,0 +1,91 @@
+/* CSS pour le formulaire : DEBUT */
+.wrapper {
+    width: 46.25em;
+    position: relative;
+    min-height: 48em;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: grey;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: black;
+    margin-bottom: 2px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    margin: 0.5em 0;
+    margin-top: 50px;
+}
+
+.input-box input[type="text"] {
+    width: 100%;
+    height: 90%;
+    background: transparent;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+.wrapper .btn {
+    width: 30%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-left: 220px;
+    margin-top: 50px;
+}
+
+button {
+    color: white !important;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-input + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* CSS pour le formulaire : FIN */
