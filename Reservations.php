@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="Reservations.css">
     <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
 </head>
+<style>
+    input[readonly] {
+        background-color: lightgray;
+    }
+</style>
 <body>
     <nav id="desktop-nav">
         <div class="logo">
@@ -63,7 +68,7 @@
                 <p>Réservation</p>
                 <div class="content">
                     <div class="box">
-                        <input type="text" readonly value="<?php echo htmlspecialchars($nomRestaurant); ?>" name="restaurant">
+                        <input type="text" class="readonly-input" readonly value="<?php echo htmlspecialchars($nomRestaurant); ?>" name="restaurant">
                         <i class="fa-solid fa-shop"></i>
                     </div>
                     <div class="box">
@@ -80,7 +85,6 @@
                     </div>
                     <div class="box">
                         <input type="number" placeholder="Nombre de personnes" name="nombre">
-                        <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="box">
                         <input type="time" name="temps">
@@ -112,7 +116,7 @@
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="index.html">Le produit</a></li>
-                    <li><a href="#search">Nos partenaires</a></li>
+                    <li><a href="Search.php">Nos partenaires</a></li>
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>
                     <li><a href="FAQ.php">FAQ</a></li>
