@@ -96,17 +96,17 @@
     $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumClient, NumResto) 
     VALUES ($nombre_reservations, '$date', '$temps', $nombre, 1, $idresto)";
     
-    echo $sql;
+    //echo $sql;
     
-    if ($conn->query($sql) === TRUE) {
-        echo "Réservation effectuée avec succès";
-    } else {
-        echo "Erreur lors de la réservation: " . $conn->error;
-    }
+    //if ($conn->query($sql) === TRUE) {
+    //    echo "Réservation effectuée avec succès";
+    //} else {
+    //    echo "Erreur lors de la réservation: " . $conn->error;
+    //}
     
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+    //ini_set('display_errors', 1);
+    //ini_set('display_startup_errors', 1);
+    //error_reporting(E_ALL);
 
     
 
@@ -162,10 +162,11 @@
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="index.html">Le produit</a></li>
-                    <li><a href="#search">Nos partenaires</a></li>
+                    <li><a href="Search.php">Nos partenaires</a></li>
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>
                     <li><a href="FAQ.php">FAQ</a></li>
+                    <li><a href="cgu.php">CGU</a></li>
                 </ul>
             </div>
             <div class="colb">

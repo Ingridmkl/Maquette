@@ -108,7 +108,7 @@
                 <ul>
                     <li><a class="footer-link" href="index.php">Accueil</a></li>
                     <li><a class="footer-link" href="index.php">Le produit</a></li>
-                    <li><a class="footer-link" href="Partenaires.php">Nos partenaires</a></li>
+                    <li><a class="footer-link" href="Search.php">Nos partenaires</a></li>
                     <li><a class="footer-link" href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a class="footer-link" href="contact.html">Formulaire</a></li>
                     <li><a class="footer-link" href="FAQ.php">FAQ</a></li>
