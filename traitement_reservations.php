@@ -108,47 +108,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    // Envoi mail récapitulatif de la reservation
-    $mail = new PHPMailer(true);
-
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'groupeaudesign@gmail.com';//@ compte gmail
-    $mail->Password = 'optimeat';//mdp compte gmail
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
-
-    $mail->setFrom('groupeaudesign@gmail.com');
-
-    $mail->addAddress($email);
-
-    $mail->isHTML(true);
     
-    $mail->Subject = "Récapitulatif de votre réservation";
-
-    $mail->Body = "
-        <h2>Récapitulatif de votre réservation</h2>
-        <p>Bonjour $nom $prenom,</p>
-        <p>Merci d'avoir réservé chez $resto.</p>
-        <p>Voici le récapitulatif de votre réservation :</p>
-        <ul>
-            <li>Restaurant : $resto</li>
-            <li>Nom : $nom</li>
-            <li>Prénom : $prenom</li>
-            <li>Date : $date</li>
-            <li>Heure : $temps</li>
-            <li>Nombre de personnes : $nombre</li>
-        </ul>
-        <p>A très bientôt!</p>
-    ";
-
-    if(!$mail->send()) {
-        echo 'Mail non envoyé.';
-        echo 'Erreur: ' . $mail->ErrorInfo;
-    } else {
-        echo 'Mail envoyé avec succès';
-    }
 
     }
 
@@ -157,7 +117,7 @@
     <!-- Affichage d'un récap de la reservation sur la page -->
     <section id="recap">
         <div class="recap-box">
-            <p class="text1">Bonjour <?php echo $_POST['nom']; ?> <?php echo $_POST['prenom']; ?>!</p>
+            <p class="text1">Bonjour <?php echo $_POST['prenom']; ?> <?php echo $_POST['nom']; ?>!</p>
             <p class="text2">Merci d'avoir réservé chez <?php echo $_POST['restaurant']; ?>.</p>
             <p class="text2">Vous trouverez ci-dessous le récapitulatif de votre réservation.</p>
             <div class="recap2">
