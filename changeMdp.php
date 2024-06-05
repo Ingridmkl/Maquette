@@ -1,21 +1,17 @@
 <?php
+session_start();
 include 'Connexion_BDD.php';
 
 // Récupérer les données du formulaire
 $newPassword = $_POST['newPassword'];
 $proprio = $_SESSION['IDrestaurateur'];
 
-// Vérifier si le nouveau mot de passe n'est pas vide
-if (empty($newPassword)) {
-    echo "<script>alert('Le nouveau mot de passe ne peut pas être vide.'); window.location = 'http://localhost/Maquette/User.php';</script>";
-    exit;
-}
 
 // Cryptage du mot de passe
 $hashed_password = password_hash($newPassword, PASSWORD_DEFAULT);
 
 // Préparer et exécuter la requête pour mettre à jour le mot de passe dans la table 'restaurateur'
-$sql_restaurateur = "UPDATE restaurateur SET Mot_de_passe = ? WHERE IDrestaurateur = ?";
+$sql_restaurateur = "UPDATE restaurateur SET mot_de_passe = ? WHERE IDrestaurateur = ?";
 $stmt = $conn->prepare($sql_restaurateur);
 $stmt->bind_param("si", $hashed_password, $proprio);
 $stmt->execute();

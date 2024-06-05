@@ -93,16 +93,16 @@
         }
 
     // Insertion des données dans la table réservation
-    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumClient, NumResto) 
-    VALUES ($nombre_reservations, '$date', '$temps', $nombre, 1, $idresto)";
+    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumResto) 
+    VALUES ($nombre_reservations, '$date', '$temps', $nombre, $idresto)";
     
     //echo $sql;
     
-    //if ($conn->query($sql) === TRUE) {
-    //    echo "Réservation effectuée avec succès";
-    //} else {
-    //    echo "Erreur lors de la réservation: " . $conn->error;
-    //}
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>alert('Réservation effectuée avec succès');</script>";
+        } else {
+            echo "Erreur lors de la réservation: " . $conn->error;
+        }
     
     //ini_set('display_errors', 1);
     //ini_set('display_startup_errors', 1);
