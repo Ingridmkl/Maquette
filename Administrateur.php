@@ -39,19 +39,19 @@
     $clients = $query->fetch_all(MYSQLI_ASSOC);
     ?>
     <div class="container">
-        <h1>Gestion de la FAQ</h1>
-        <div class="category">
-            <p>
-            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
-            <a href="#page de JD" id="delBtn">Modifier</a>
-            </p>
-        </div>
-    </div>
-    <div class="container">
         <h1>Gestion des CGU et mentions légales</h1>
         <div class="category">
             <p>
             Vous pouvez modifier, suuprimer ou enregistrer de nouvelles informations des las CGU et mentions légales
+            <a href="cgu-admin.php" id="delBtn">Modifier</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Gestion de la FAQ</h1>
+        <div class="category">
+            <p>
+            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
             <a href="#page de JD" id="delBtn">Modifier</a>
             </p>
         </div>
