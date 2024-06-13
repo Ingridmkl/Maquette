@@ -72,25 +72,28 @@
                         <i class="fa-solid fa-shop"></i>
                     </div>
                     <div class="box">
-                        <input type="text" placeholder="Nom" name="nom">
+                        <input type="text" placeholder="Nom" name="nom" required>
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="box">
-                        <input type="text" placeholder="Prénom" name="prenom">
+                        <input type="text" placeholder="Prénom" name="prenom" required>
                         <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="box">
+                        <input type="tel" name="tel" placeholder="Numero de téléphone" pattern="[0-9]{10}" required>
                     </div>
                     <div class="box">
                         <input type="email" placeholder="Email" name="email">
                         <i class="fa-solid fa-at"></i>
                     </div>
                     <div class="box">
-                        <input type="number" placeholder="Nombre de personnes" name="nombre">
+                        <input type="number" placeholder="Nombre de personnes" name="nombre" required>
                     </div>
                     <div class="box">
-                        <input type="time" name="temps">
+                        <input type="time" name="temps" required>
                     </div>
                     <div class="box">
-                        <input type="date" name="date">
+                        <input type="date" name="date" required>
                         <!-- <i class="fa-solid fa-calendar-days"></i> -->
                     </div>
                     <p></p>

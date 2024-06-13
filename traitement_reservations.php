@@ -80,7 +80,27 @@
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
         $temps = isset($_POST['temps']) ? $_POST['temps'] : '';
         $date = isset($_POST['date']) ? $_POST['date'] : '';
+        $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
 
+        // Vérification si le client existe déjà
+        $check_client = "SELECT IDclient FROM client WHERE Email = '$email'";
+        $result_check_client = $conn->query($check_client);
+        if ($result_check_client->num_rows > 0) {
+            $row = $result_check_client->fetch_assoc();
+            $idclient = $row['IDclient'];
+        } else {
+        // Insert new client into the client table
+            $insert_client = "INSERT INTO client (Nom, Prénom, Email, Téléphone, Date_de_naissance, Mot_de_passe) 
+                              VALUES ('$nom', '$prenom', '$email', $tel, '$date', 'password')";
+            if ($conn->query($insert_client) === TRUE) {
+                $idclient = $conn->insert_id;
+            } else {
+                echo "Erreur lors de l'insertion du client: " . $conn->error;
+                exit();
+            }
+        }
+
+        
         //Récupération de l'id resto
         $get_id= "SELECT Idresto FROM restaurant WHERE Nom ='$resto'";
         $res_get_id = $conn->query($get_id);
@@ -93,8 +113,8 @@
         }
 
     // Insertion des données dans la table réservation
-    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumResto) 
-    VALUES ($nombre_reservations, '$date', '$temps', $nombre, $idresto)";
+    $sql = "INSERT INTO réservation (IDreservation, Date, Heure, Nombre_de_personne, NumClient, NumResto) 
+            VALUES ($nombre_reservations, '$date', '$temps', $nombre, $idclient,$idresto)";
     
     //echo $sql;
     
