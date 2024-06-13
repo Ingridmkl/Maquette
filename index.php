@@ -143,6 +143,7 @@
                     <li><a href="contact.html">Formulaire</a></li>
                     <li><a href="FAQ.html">FAQ</a></li>
                     <li><a href="cgu.php">CGU</a></li>
+                    <li><a href="forum.php">Forum</a></li>
                 </ul>
             </div>
             <div class="colb">
