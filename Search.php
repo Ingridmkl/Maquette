@@ -113,6 +113,8 @@
                     <li><a class="footer-link" href="contact.html">Formulaire</a></li>
                     <li><a class="footer-link" href="FAQ.php">FAQ</a></li>
                     <li><a class="footer-link" href="cgu.php">CGU</a></li>
+                    <li><a class="footer-link" href="forum.php">Forum</a></li>
+
                 </ul>
             </div>
             <div class="colb">

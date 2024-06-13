@@ -42,7 +42,7 @@
         <h1>Gestion des CGU et mentions légales</h1>
         <div class="category">
             <p>
-            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles informations des las CGU et mentions légales
+            Vous pouvez modifier, supprimer ou enregistrer de nouvelles informations des las CGU et mentions légales
             <a href="cgu-admin.php" id="delBtn">Modifier</a>
             </p>
         </div>
@@ -51,7 +51,7 @@
         <h1>Gestion de la FAQ</h1>
         <div class="category">
             <p>
-            Vous pouvez modifier, suuprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
+            Vous pouvez modifier, supprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
             <a href="FAQ.php" id="delBtn">Modifier</a>
             </p>
         </div>
