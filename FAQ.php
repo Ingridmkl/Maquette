@@ -114,7 +114,7 @@
                 <summary>Optim'Eat est-il adapté à mon restaurant ?</summary>
                 <p>Optim'Eat est conçu pour s'adapter à une large gamme de restaurants, des petits bistrots aux grands établissements. 
                     <br><br>
-                    <img src="./Ressources/doubleResto.jpeg" alt="Restaurant" class="centered">
+                    <img src="./Ressources/doubleResto.png" alt="Restaurant" class="centered">
                     <br>
                     Pour savoir s'il vous convient, contactez-nous pour une consultation personnalisée.
                 </p>
