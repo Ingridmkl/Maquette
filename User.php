@@ -131,7 +131,7 @@
                             <?php
                         }
                     } else {
-                        echo "0 results";
+                        echo "Vous n'avez mis aucun restaurant pour l'instant";
                     }
                     ?>
                 </div>
