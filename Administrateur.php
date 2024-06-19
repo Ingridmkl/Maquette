@@ -52,7 +52,7 @@
         <div class="category">
             <p>
             Vous pouvez modifier, supprimer ou enregistrer de nouvelles questions et réponses dans la FAQ
-            <a href="FAQ.php" id="delBtn">Modifier</a>
+            <a href="FAQ_admin.php" id="delBtn">Modifier</a>
             </p>
         </div>
     </div>
