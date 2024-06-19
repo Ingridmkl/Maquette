@@ -90,10 +90,10 @@
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="index.php">Le produit</a></li>
-                    <li><a href="#search">Nos partenaires</a></li>
+                    <li><a href="Search.php">Nos partenaires</a></li>
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
                     <li><a href="forum.php">Forum</a></li>
                 </ul>
             </div>
@@ -104,6 +104,5 @@
         </div>
     </footer>
     <script src="Script.js"></script>
-
 </body>
 </html>
