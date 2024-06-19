@@ -97,6 +97,7 @@ form {
     max-width: 600px;
     padding: 20px;
     margin-left: 350px;
+    
 }
 
 form input, form textarea{
@@ -122,6 +123,7 @@ form button.submit{
     margin-top: 5px;
     padding: 10px;
     border-bottom: 1px solid black;
+    border-radius: 10px;
 }
 
 .reply {

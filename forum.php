@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
     <title>Forum</title>
     <link rel="stylesheet" href="forum.css">
     <script src="forum.js"></script>
-
+    <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
 </head>
 <body>
     <nav id="desktop-nav">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGU</title>
+    <title>CGU admin</title>
     <link rel="stylesheet" href="cgu.css">
     <link rel="stylesheet" href="media.css">
     <script src="https://kit.fontawesome.com/dcfda6ef51.js"></script>
@@ -18,14 +18,12 @@
             <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
         </div>
         <div>
-            <ul class="nav-links">
-                <li><a class="nav-link" href="index.php">Accueil</a></li>
-                <li><a class="nav-link" href="index.php">Le produit</a></li>
-                <li><a class="nav-link" href="Search.php">Nos partenaires</a></li>
+            <ul class="login">
+                <a href="deconnexion.php">
+                    <button class="btn btn-color-2" style="margin-left: 1150px;">Déconnexion</button>
+                </a>
             </ul>
         </div>
-
-
     </nav>
     <div class="container">
     <?php
@@ -132,14 +130,7 @@
             <div class="col">
                 <h3>Raccourcis</h3>
                 <ul>
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="index.php">Le produit</a></li>
-                    <li><a href="#search">Nos partenaires</a></li>
-                    <li><a href="Page_A_propo.html">A propos de nous</a></li>
-                    <li><a href="contact.html">Formulaire</a></li>
                     <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="forum.php">Forum</a></li>
-
                 </ul>
             </div>
             <div class="colb">

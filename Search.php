@@ -15,8 +15,8 @@
         <div>
             <ul class="nav-links">
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="#menu-glissant-2">Le produit</a></li>
-                <li><a href="#search">Nos partenaires</a></li>
+                <li><a href="index.php">Le produit</a></li>
+                <li><a href="Search.php">Nos partenaires</a></li>
             </ul>
         </div>
         <div>
@@ -40,8 +40,8 @@
         </div>
         <div class="menu-links">
             <li><a href="index.php">Accueil</a></li>
-            <li><a href="#menu-glissant-2">Le produit</a></li>
-            <li><a href="#search">Nos partenaires</a></li>
+            <li><a href="index.php">Le produit</a></li>
+            <li><a href="Search.php">Nos partenaires</a></li>
             <a href="PageConnexion.html">
                 <button class="btn btn-color-2" >Connexion</button>
             </a>
@@ -111,7 +111,7 @@
                     <li><a class="footer-link" href="Search.php">Nos partenaires</a></li>
                     <li><a class="footer-link" href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a class="footer-link" href="contact.html">Formulaire</a></li>
-                    <li><a class="footer-link" href="FAQ.php">FAQ</a></li>
+                    <li><a class="footer-link" href="FAQ.html">FAQ</a></li>
                     <li><a class="footer-link" href="cgu.php">CGU</a></li>
                     <li><a class="footer-link" href="forum.php">Forum</a></li>
 
