@@ -1,0 +1,365 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(245, 245, 247);
+    display: flex;
+    flex-direction: column
+}
+body section{
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a, 
+.btn{
+    transition: all 300ms ease;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+a:hover {
+    color: #cca76e;
+    text-decoration: none;
+    text-decoration-color: rgb(181,181,181) ;
+}
+
+
+/*Search area
+#search{
+    align-items: center;
+}
+*/
+
+#search h2{
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.tamp{
+    width: 30%;
+    height: 1000px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+    justify-content: center;
+}
+
+.tamp i.fa-solid.fa-user-gear{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    color: #000;
+    background: #cacaca;
+    cursor: pointer;
+    margin: 15px;
+    padding-left: 7px;
+}
+
+.tamp::-webkit-scrollbar{
+    display: none;
+}
+
+.tamp #forum{
+    width: 80%;
+    border: 1px solid rgb(26, 1, 1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 10px;
+}
+/*Affichage du chat*/
+
+/* Styles pour la section de chat */
+#chat {
+    height: 1000px;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.chat-header {
+    margin-bottom: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.chat-header i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 35px;
+    color: #000;
+    background: #cacaca;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.chat-header h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.chat-header p {
+    margin: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.chat-body {
+    border: 1px solid #cacaca;
+    border-radius: 15px;
+    box-shadow: inset 4px 4px 30px rgba(0, 0, 0, 0.06);
+    width: 90%;
+    height: 60%;
+    margin-top: 50px;
+    overflow-y: scroll;
+}
+/**/
+
+#forum input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 90%;
+    height: 80%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 10px;
+}
+
+.product-list{
+    padding: 20px 0;
+}
+.product{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product .reservation{
+    margin-left: auto;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation a:hover{
+    color: #cca76e;
+}
+
+.reservation a, .reservation p{
+    margin: 0 5px;
+}
+
+.reservation hr{
+    border: none;
+    border-top: 1px solid black;
+    margin: 5px 0;
+}
+
+.product img{
+    width: 25%;
+    height: 25%;
+    object-fit: cover;
+    border: 5px;
+    border-radius: 5px;
+}
+
+.p-details{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-details h2{
+    font-size: 27px;
+    margin-bottom: auto;
+    color: black;
+}
+
+.p-details h6{
+    color: black;
+    margin-top: auto;
+}
+
+/*partie faite par Louis*/
+.partners {
+    margin-top: 60px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.partners h2 {
+text-align: center;
+margin-left: 15px;
+color: #333;
+}
+
+.restaurant {
+background-color: white;
+margin: 20px auto;
+width: 70%; /* Largeur du cadre restaurant */
+height: 230px; /* Hauteur fixe pour tous les cadres */
+display: flex;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+border-radius: 10px;
+overflow: hidden;
+}
+
+.info {
+width: 30%; /* Ajusté pour laisser 70% à l'image */
+display: flex;
+align-items: center; /* Centrer verticalement le contenu de .info */
+justify-content: space-between; /* Espacement entre le nom et le bouton */
+padding: 10px; /* Padding ajusté */
+box-sizing: border-box;
+}
+
+.info h3 {
+margin: 0; /* Supprime les marges par défaut de h3 */
+flex-grow: 1; /* Permet au titre de prendre l'espace disponible */
+margin-left: 20px;
+}
+
+.info button {
+background-color: transparent;
+    border: 1.7px solid black ;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+    text-transform:uppercase ;
+    font-weight: bold;
+    transition: background-color 300ms;
+}
+
+.info button:hover {
+background-color: black;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    text-transform:uppercase ;
+    font-weight: bold;
+    transition: background-color 300ms;
+}
+
+.image {
+width: 70%; /* L'image prend 70% du cadre */
+display: flex;
+align-items: center;
+justify-content: center;
+margin : 15px; /* Marge autour de l'image */
+border-radius: 10px; /* Bords arrondis de l'image */
+overflow: hidden; /* Empêche l'image de déborder */
+}
+
+.image img {
+width: 100%; /* L'image remplit l'espace disponible dans .image */
+height: auto; /* Hauteur ajustée automatiquement */
+object-fit: cover; /* Couvre la zone sans déformer */
+border-radius: 10px; /* Bords arrondis pour l'image elle-même */
+}
+.h2{
+text-align: center;
+color: #333;
+font-size: 24px; /* Ajoutez la taille de la police que vous souhaitez ici */
+padding-bottom: 20px;
+margin-left: 15px;
+color: #333;}
+.product .user i{
+    width: 70px;;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 50px;
+    color: #000;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+.product .user{
+    width: 50%;
+}
+
+.product {
+    cursor: pointer; /* Change le curseur de la souris en pointeur pour indiquer que c'est cliquable */
+}
+/**/
+#reg{
+    flex-direction: row;
+}
+
+.chat-body #messages{
+    padding: 20px;
+}
+
+.message.blue {
+    color: black;
+    background-color: #c5c5c5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-radius: 18px 0 18px 18px;
+}
+
+.message.grey {
+    color: white;
+    margin: 30px;
+    background-color: #333333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 18px 18px 0 18px;
+}
+

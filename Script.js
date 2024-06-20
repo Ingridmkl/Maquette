@@ -26,5 +26,40 @@ const search = () =>{
     }
 }
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log("JavaScript is loaded");
+
+    // Sélectionner tous les éléments utilisateurs
+    const users = document.querySelectorAll('.product');
+    console.log(users); // Affiche tous les éléments .product trouvés
+
+    // Ajouter un gestionnaire d'événements de clic pour chaque utilisateur
+    users.forEach(user => {
+        user.addEventListener('click', function() {
+            console.log("User clicked", this); // Affiche l'élément cliqué
+
+            // Récupérer les informations de l'utilisateur à partir des attributs data
+            const userId = this.getAttribute('data-id');
+            const userName = this.getAttribute('data-name');
+
+            // Sélectionner la section de chat
+            const chat = document.getElementById('chat');
+
+            // Mettre à jour la section de chat avec les informations de l'utilisateur
+            chat.innerHTML = `
+                <div class="chat-header">
+                    <h2>${userName}</h2>
+                    <p>ID: ${userId}</p>
+                </div>
+                <div class="chat-body">
+                    <!-- Contenu du chat ici -->
+                </div>
+            `;
+        });
+    });
+});
+
+
+
 function clickbutton(){
 }
