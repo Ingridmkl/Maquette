@@ -130,7 +130,7 @@
             <div class="col">
                 <h3>Raccourcis</h3>
                 <ul>
-                    <li><a href="FAQ.php">FAQ</a></li>
+                    <li><a href="FAQ-admin.php">FAQ</a></li>
                 </ul>
             </div>
             <div class="colb">
