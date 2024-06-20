@@ -74,7 +74,7 @@
             </section>
             <button type="submit" style=" width: 30%; height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;" onclick="enableEditing()">Modifier</button>
             <br>
-            <a href="Administrateur.php"><button style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-top: 30px; margin-left: 35%;">Retourner sur la page admin</button></a>
+            <a href="Administrateur.php"><button style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; font-weight: 600; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-top: 30px; margin-left: 35%;">Retourner sur la page admin</button></a>
 
         </div>
 
