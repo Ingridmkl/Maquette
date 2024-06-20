@@ -28,15 +28,15 @@
         <form id="myForm" action="changeMdp.php" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
             <h1>Créer votre nouveau mot de passe</h1>
             <div class="input-box">
-                <input id="newPassword" type="password" placeholder="Entrez votre nouveau mot de passe" required> <!--j'ai retirer "name="passwordConfirm"-->
+                <input id="newPassword" name="newPassword" type="password" placeholder="Entrez votre nouveau mot de passe" required>
             </div>
             <div class="input-box">
-                <input id="newPasswordConfirm" type="password" placeholder="Confirmer votre nouveau mot de passe" required> <!--j'ai retirer "name="passwordConfirm"-->
+                <input id="newPasswordConfirm" type="password" placeholder="Confirmer votre nouveau mot de passe" required>
             </div>
             <br><br>
             <button type="submit" class="btn">Modifier</button>
             <br><br>
-        </form>
+        </form>        
     </div>
     <div>
         <p><br><br></p>

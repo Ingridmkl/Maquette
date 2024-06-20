@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,52 +59,83 @@
                 </div>
                 <div id="anchor2" class="graph">
                     <h2>Sonore Level by time</h2>
-                    <canvas id="myCanvas"></canvas>
+                    <canvas id="soundQualityChart"></canvas> <!-- Corriger l'ID ici -->
                     <script>
-                        var canvas = document.getElementById('myCanvas');
-                        var ctx = canvas.getContext('2d');
-                        var data = {
-                            labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00'],
-                            datasets: [{
-                                label: 'Niveau sonore',
-                                data: [12, 19, 3, 5, 2, 3, 7, 8, 12, 15, 16, 18, 20],
-                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                                borderColor: 'rgba(0, 0, 0, 1)',
-                                borderWidth: 1
-                            }]
-                        };
-                        new Chart(ctx, {
+                        const ctx = document.getElementById('soundQualityChart').getContext('2d');
+                        const soundQualityChart = new Chart(ctx, {
                             type: 'line',
-                            data: data,
+                            data: {
+                                labels: [],
+                                datasets: [{
+                                    label: 'Qualité du son',
+                                    data: [],
+                                    borderColor: 'rgba(75, 192, 192, 1)',
+                                    borderWidth: 1,
+                                    fill: false
+                                }]
+                            },
                             options: {
-                                responsive: true,
                                 scales: {
                                     x: {
-                                        display: true,
+                                        type: 'time',
+                                        time: {
+                                            unit: 'second'
+                                        },
                                         title: {
                                             display: true,
-                                            text: 'Temps'
+                                            text: 'Temps (min:sec)'
                                         }
                                     },
                                     y: {
-                                        display: true,
                                         title: {
                                             display: true,
-                                            text: 'Niveau sonore (dB)'
+                                            text: 'Valeur'
                                         }
                                     }
                                 }
                             }
                         });
+
+                        function fetchLatestValues() {
+                            fetch('get_logs.php') // Remplacez par le chemin réel de votre script PHP
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.length > 0) {
+                                        soundQualityChart.data.labels = data.map(frame => frame.timestamp);
+                                        soundQualityChart.data.datasets[0].data = data.map(frame => frame.value);
+                                        soundQualityChart.update();
+                                    }
+                                })
+                                .catch(error => console.error('Erreur:', error));
+                        }
+
+                        // Appelle fetchLatestValues toutes les 5 secondes
+                        setInterval(fetchLatestValues, 5000);
+                        fetchLatestValues(); // Appel initial pour charger les valeurs immédiatement
                     </script>
                 </div>
                 <div id="anchor3" class="parameters">
                     <div class="top-parameters">
                         <h2>Qualité du son</h2>
-                        <p>Ici, vous pouvez afficher des informations sur la qualité du son en direct (paramètres son et autres).</p>
-                        <p>Choix d'une thème aléatoire</p>
-                        <p>Choix d'une thème prédéfini</p>
+                        <p>Valeur actuelle (dBm) : <span id="current-value">--</span></p>
                     </div>
+                    <script>
+                        function fetchLatestValue() {
+                            fetch('get_logs.php') // Remplacez par le chemin réel de votre script PHP
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.length > 0) {
+                                        const latestValue = data[data.length - 1].value;
+                                        document.getElementById('current-value').textContent = latestValue;
+                                    }
+                                })
+                                .catch(error => console.error('Erreur:', error));
+                        }
+
+                        // Appelle fetchLatestValue toutes les 5 secondes
+                        setInterval(fetchLatestValue, 5000);
+                        fetchLatestValue(); // Appel initial pour charger la valeur immédiatement
+                    </script>
                 </div>
                 <div id="anchor4" class="soundInfo">
                     <h2>Paramètres de la musique</h2>
