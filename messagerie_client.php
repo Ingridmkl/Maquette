@@ -19,13 +19,14 @@ $clientName = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
         <h2 class="h2">Messagerie</h2>
         <div class="container">
             <div class="tamp">
-                <i class="fa-solid fa-user-gear"></i>
+                <i class="fa-solid fa-user"></i>
+                <h2><?php echo htmlspecialchars($clientName); ?></h2>
+                <p>ID: <?php echo htmlspecialchars($clientId); ?></p>
             </div>
             <div class="chat" id="chat">
                 <div class="chat-header">
-                    <i class="fa-solid fa-user"></i>
-                    <h2><?php echo htmlspecialchars($clientName); ?></h2>
-                    <p>ID: <?php echo htmlspecialchars($clientId); ?></p>
+                    <i class="fa-solid fa-user-gear"></i>
+                    <h2>Admin</h2>
                 </div>
                 <div class="chat-body" id="chat-body">
                     <div id="messages-container"></div>
@@ -47,7 +48,7 @@ $clientName = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
 
             // Fetch messages via AJAX
             try {
-                const response = await fetch('get_messages.php?userId=' + userId);
+                const response = await fetch('get_messages_client.php?userId=' + userId);
                 const messages = await response.json();
 
                 let messagesHTML = messages.map(message => `
@@ -69,7 +70,7 @@ $clientName = $_SESSION['prenom'] . ' ' . $_SESSION['nom'];
                 formData.append('NumChat', userId != 1 ? 1 : userId);
 
                 try {
-                    const response = await fetch('send_message.php', {
+                    const response = await fetch('send_message_client.php', {
                         method: 'POST',
                         body: formData
                     });
