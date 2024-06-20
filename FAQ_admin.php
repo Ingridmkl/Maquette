@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
             gap: 10px; 
         }
 
-        #add-question-button, #modify-button {
+        #add-question-button, #modify-button , #return{
             margin: 20px auto; 
             display: block; 
             padding: 10px 20px;
@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
             transition: all 0.3s ease; 
         }
 
-        #add-question-button:hover, #modify-button:hover {
+        #add-question-button:hover, #modify-button:hover , #return:hover{
             background-color: black;
             color: white;
         }
@@ -116,7 +116,8 @@ if ($result->num_rows > 0) {
     </div>
     <div>
         <a href="Administrateur.php">
-            <button style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-bottom: 100px; margin-left: 35%;">Retourner sur la page admin</button></a>
+            <button id="return">Retourner sur la page admin</button>
+        </a>
     </div>
     <footer>
         <div class="footer-container">
