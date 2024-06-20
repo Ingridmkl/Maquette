@@ -57,6 +57,15 @@
         </div>
     </div>
     <div class="container">
+        <h1>Messagerie interne</h1>
+        <div class="category">
+            <p>
+            Vous pouvez envoyer des messages privés avec les utilisateurs du produit Optim'eat
+            <a href="messagerie.php" id="delBtn">Messagerie</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
         <h1>Gestion des comptes utilisateurs</h1>
         <div class="category">
             <h2>Restaurateurs</h2>
