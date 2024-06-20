@@ -20,7 +20,7 @@
         <div>
             <ul class="login">
                 <a href="deconnexion.php">
-                    <button class="btn btn-color-2" style="margin-left: 1150px;">Déconnexion</button>
+                    <button class="btn btn-color-2">Déconnexion</button>
                 </a>
             </ul>
         </div>
@@ -74,7 +74,7 @@
             </section>
             <button type="submit" style=" width: 30%; height: 45px; background: black; color: #fff; border: none; border-radius: 40px; padding: 10px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 30px; margin-left: 35%;" onclick="enableEditing()">Modifier</button>
             <br>
-            <a href="Administrateur.php" style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-top: 30px; margin-left: 35%;">Retourner sur la page admin</a>
+            <a href="Administrateur.php"><button style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-top: 30px; margin-left: 35%;">Retourner sur la page admin</button></a>
 
         </div>
 
@@ -130,7 +130,7 @@
             <div class="col">
                 <h3>Raccourcis</h3>
                 <ul>
-                    <li><a href="FAQ-admin.php">FAQ</a></li>
+                    <li><a href="FAQ_admin.php">FAQ</a></li>
                 </ul>
             </div>
             <div class="colb">

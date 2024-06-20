@@ -1,8 +1,6 @@
 <?php
-// Inclure le fichier de connexion à la base de données
 include 'Connexion_BDD.php';
 
-// Récupérer les questions de la base de données
 $sql = "SELECT ID, question, answer FROM faq";
 $result = $conn->query($sql);
 $faq_questions = [];
@@ -64,8 +62,8 @@ if ($result->num_rows > 0) {
             <div class="col">
                 <h3>Raccourcis</h3>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="index.html">Le produit</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="index.php">Le produit</a></li>
                     <li><a href="Search.php">Nos partenaires</a></li>
                     <li><a href="Page_A_propo.html">A propos de nous</a></li>
                     <li><a href="contact.html">Formulaire</a></li>

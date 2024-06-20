@@ -50,6 +50,25 @@ if ($result->num_rows > 0) {
             background-color: black;
             color: white;
         }
+        .login button{
+            background-color: transparent;
+            border: 1.7px solid black ;
+            border-radius: 7px;
+            color: black;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            text-transform:uppercase ;
+            transition: background-color 300ms;
+            
+        }
+
+        .login button:hover{
+            color: #fff;
+            background-color: #000;
+
+        }
+
     </style>
 </head>
 <body>
@@ -58,10 +77,10 @@ if ($result->num_rows > 0) {
             <img src="./Ressources/AU_DESIGN_LOGO noir.png" height="40%" width="40%">
         </div>
         <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#le produit">Le produit</a></li>
-                <li><a href="Partenaires.html">Nos partenaires</a></li>
+            <ul class="login">
+                <a href="deconnexion.php">
+                    <button class="btn btn-color-2">Déconnexion</button>
+                </a>
             </ul>
         </div>
     </nav>
@@ -95,7 +114,10 @@ if ($result->num_rows > 0) {
             <button type="button" id="delete-button" style="display: none;">Supprimer</button>
         </form>
     </div>
-
+    <div>
+        <a href="Administrateur.php">
+            <button style=" width: 30%; display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; border: none; border-radius: 40px; text-align: center; cursor: pointer; margin-bottom: 100px; margin-left: 35%;">Retourner sur la page admin</button></a>
+    </div>
     <footer>
         <div class="footer-container">
             <div class="col">
@@ -110,13 +132,7 @@ if ($result->num_rows > 0) {
             <div class="col">
                 <h3>Raccourcis</h3>
                 <ul>
-                    <li><a href="index.php">Accueil</a></li>
-                    <li><a href="index.php">Le produit</a></li>
-                    <li><a href="Search.php">Nos partenaires</a></li>
-                    <li><a href="Page_A_propo.html">A propos de nous</a></li>
-                    <li><a href="contact.html">Formulaire</a></li>
-                    <li><a href="cgu.php">CGU</a></li>
-                    <li><a href="forum.php">Forum</a></li>
+                    <li><a href="cgu-admin.php">CGU</a></li>
                 </ul>
             </div>
             <div class="colb">
