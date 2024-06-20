@@ -30,9 +30,9 @@ if ($result->num_rows > 0) {
         </div>
         <div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#le produit">Le produit</a></li>
-                <li><a href="Partenaires.html">Nos partenaires</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="index.php">Le produit</a></li>
+                <li><a href="Search.php">Nos partenaires</a></li>
             </ul>
         </div>
     </nav>
